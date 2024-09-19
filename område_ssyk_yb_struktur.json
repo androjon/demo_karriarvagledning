@@ -1,0 +1,2589 @@
+{
+  "Administration, ekonomi, juridik": [
+    {
+      "Informatörer, kommunikatörer och PR-specialister": [
+        "Informationsassistent", 
+        "Pressekreterare", 
+        "Informatör/Kommunikatör", 
+        "Teknikinformatör", 
+        "Kommunikationsstrateg", 
+        "Copywriter"
+      ]
+    }, 
+    {
+      "Redovisningsekonomer": [
+        "Redovisningsekonom", 
+        "Redovisningskonsult", 
+        "Revisorsassistent"
+      ]
+    }, 
+    {
+      "Gruppledare för kontorspersonal": [
+        "Arbetsledare, kontorspersonal/Gruppledare, kontorspersonal"
+      ]
+    }, 
+    {
+      "Arkeologer och specialister inom humaniora m.m.": [
+        "Arkeolog", 
+        "Forskare, samhällsvetenskap"
+      ]
+    }, 
+    {
+      "Inkasserare och pantlånare m.fl.": [
+        "Inkassohandläggare"
+      ]
+    }, 
+    {
+      "Banktjänstemän": [
+        "Kredithandläggare", 
+        "Privatekonomisk rådgivare"
+      ]
+    }, 
+    {
+      "Kontorsreceptionister": [
+        "Kontorsreceptionist", 
+        "Receptionist, telefonist"
+      ]
+    }, 
+    {
+      "Affärs- och företagsjurister": [
+        "Familjerättsjurist", 
+        "Bolagsjurist", 
+        "Skattejurist", 
+        "Fastighetsjurist", 
+        "Arbetsrättsjurist", 
+        "Affärsjurist", 
+        "Företagsjurist"
+      ]
+    }, 
+    {
+      "Planerare och utredare m.fl.": [
+        "Samhällsvägledare", 
+        "Näringslivssekreterare/Näringslivsutvecklare", 
+        "Vårdutvecklare", 
+        "Miljö- och klimatstrateg", 
+        "Samhällsplanerare", 
+        "Föreningskonsulent", 
+        "Trafikplanerare, offentlig förvaltning", 
+        "EU-handläggare", 
+        "Handläggare, offentlig förvaltning/Utredare, offentlig förvaltning", 
+        "Utredningssekreterare", 
+        "Kommunsekreterare", 
+        "Kultursekreterare", 
+        "Folkhälsoutvecklare", 
+        "Departementssekreterare", 
+        "Undervisningsråd", 
+        "Skolsekreterare", 
+        "Kommunhandläggare", 
+        "Ombudsman"
+      ]
+    }, 
+    {
+      "Skattehandläggare": [
+        "Skattehandläggare", 
+        "Kvalificerad skattehandläggare"
+      ]
+    }, 
+    {
+      "Övriga jurister": [
+        "IT-jurist", 
+        "Biträdande jurist", 
+        "Föredragande/Beredningsjurist"
+      ]
+    }, 
+    {
+      "Lednings- och organisationsutvecklare": [
+        "Ekonomikonsult", 
+        "Affärsutvecklare", 
+        "Kvalitetssamordnare/Kvalitetskoordinator", 
+        "Företagskonsult", 
+        "Civilingenjör, organisationsutveckling", 
+        "Verksamhetsarkitekt", 
+        "Organisationsutvecklare", 
+        "Organisationskonsult", 
+        "Verksamhetsanalytiker", 
+        "Verksamhetskonsult", 
+        "Verksamhetsutvecklare"
+      ]
+    }, 
+    {
+      "Domstols- och juristsekreterare m.fl.": [
+        "Juristassistent/Paralegal", 
+        "Beredningssekreterare/Domstolssekreterare/Domstolshandläggare"
+      ]
+    }, 
+    {
+      "Chefssekreterare och VD-assistenter m.fl.": [
+        "Chefssekreterare", 
+        "VD-sekreterare"
+      ]
+    }, 
+    {
+      "Arbetsförmedlare": [
+        "Arbetsförmedlare", 
+        "Jobbcoach/Utbildningscoach"
+      ]
+    }, 
+    {
+      "Löne- och personaladministratörer": [
+        "HR-assistent", 
+        "Personaladministratör", 
+        "Löneadministratör/Lönekonsult"
+      ]
+    }, 
+    {
+      "Övriga kontorsassistenter och sekreterare": [
+        "Bostadsförmedlare", 
+        "Administratör", 
+        "Registrator"
+      ]
+    }, 
+    {
+      "Domare": [
+        "Jurist, allmän domstol"
+      ]
+    }, 
+    {
+      "Förvaltnings- och organisationsjurister": [
+        "Organisationsjurist", 
+        "Verksjurist", 
+        "Stadsjurist/Kommunjurist", 
+        "Förvaltningsjurist"
+      ]
+    }, 
+    {
+      "Personal- och HR-specialister": [
+        "Rekryterare/Rekryteringskonsult", 
+        "Researcher, rekrytering", 
+        "HR-konsult/PA-konsult", 
+        "Personalutvecklare", 
+        "HR-specialist/HR-advisor", 
+        "Personalansvarig"
+      ]
+    }, 
+    {
+      "Övriga ekonomer": [
+        "Fastighetsekonom", 
+        "Förvaltningsekonom", 
+        "Produktionsekonom"
+      ]
+    }, 
+    {
+      "Statistiker": [
+        "Statistiker"
+      ]
+    }, 
+    {
+      "Nationalekonomer och makroanalytiker m.fl.": [
+        "Samhällsekonom", 
+        "Nationalekonom"
+      ]
+    }, 
+    {
+      "Ekonomiassistenter m.fl.": [
+        "Bokförare", 
+        "Redovisningsassistent", 
+        "Ekonomiassistent"
+      ]
+    }, 
+    {
+      "Finansanalytiker och investeringsrådgivare m.fl.": [
+        "Finansekonom", 
+        "Finanskonsult", 
+        "Finansanalytiker", 
+        "Företagsrådgivare", 
+        "Placeringsrådgivare"
+      ]
+    }, 
+    {
+      "Revisorer m.fl.": [
+        "Revisor"
+      ]
+    }, 
+    {
+      "Skadereglerare och värderare": [
+        "Skadereglerare", 
+        "Besiktningsman, försäkring/Skadeinspektör, försäkring"
+      ]
+    }, 
+    {
+      "Åklagare": []
+    }, 
+    {
+      "Mäklare inom finans": []
+    }, 
+    {
+      "Controller": [
+        "Accounting controller", 
+        "Koncerncontroller", 
+        "Finansiell controller", 
+        "Controller", 
+        "Business controller"
+      ]
+    }, 
+    {
+      "Advokater": []
+    }, 
+    {
+      "Skolassistenter m.fl.": [
+        "Utbildningsassistent", 
+        "Skolassistent"
+      ]
+    }, 
+    {
+      "Lantmätare": [
+        "Civilingenjör, lantmäteri", 
+        "Lantmätare/Förrättningslantmätare", 
+        "Exploateringsingenjör", 
+        "Markförhandlare"
+      ]
+    }, 
+    {
+      "Telefonister": [
+        "Växeltelefonist"
+      ]
+    }, 
+    {
+      "Traders och fondförvaltare": []
+    }, 
+    {
+      "Socialförsäkringshandläggare": [
+        "Försäkringsutredare, försäkringskassa", 
+        "Försäkringshandläggare, försäkringskassa"
+      ]
+    }, 
+    {
+      "Övriga handläggare": [
+        "Utbildningsadministratör/Studieadministratör", 
+        "Utbildningskoordinator", 
+        "Servicehandläggare", 
+        "Nämndsekreterare", 
+        "Utbildningshandläggare"
+      ]
+    }, 
+    {
+      "Arkiv- och biblioteksassistenter m.fl.": [
+        "Arkivassistent", 
+        "Biblioteksassistent"
+      ]
+    }, 
+    {
+      "Kundtjänstpersonal": [
+        "Kundtjänstmedarbetare", 
+        "Garantihandläggare", 
+        "Besöksbokare/Kundbokare", 
+        "Reklamationshandläggare"
+      ]
+    }, 
+    {
+      "Försäkringssäljare och försäkringsrådgivare": [
+        "Riskbedömare", 
+        "Försäkringsförmedlare/Försäkringsmäklare", 
+        "Försäkringshandläggare", 
+        "Försäkringsrådgivare/Försäkringssäljare", 
+        "Kundtjänsteman, försäkring"
+      ]
+    }, 
+    {
+      "Backofficepersonal m.fl.": [
+        "Frontofficepersonal", 
+        "Backofficepersonal"
+      ]
+    }, 
+    {
+      "Medicinska sekreterare, vårdadministratörer m.fl.": [
+        "Medicinsk sekreterare"
+      ]
+    }
+  ], 
+  "Bygg och anläggning": [
+    {
+      "Grovarbetare inom bygg och anläggning": [
+        "Förrådsarbetare, bygg", 
+        "Grovarbetare, bygg och anläggning", 
+        "Underhållsarbetare, bygg och anläggning"
+      ]
+    }, 
+    {
+      "Anläggningsmaskinförare m.fl.": [
+        "Lastmaskinförare", 
+        "Grävmaskinförare", 
+        "Hjullastarförare, godshantering"
+      ]
+    }, 
+    {
+      "Anläggningsarbetare": [
+        "Drift- och vägunderhållsarbetare", 
+        "Bantekniker", 
+        "Väg- och anläggningsarbetare, utan yrkesbevis", 
+        "Stensättare", 
+        "Beläggningsarbetare", 
+        "Väg- och anläggningsarbetare"
+      ]
+    }, 
+    {
+      "Övriga byggnads- och anläggningsarbetare": [
+        "Demonteringsarbetare/Rivningsarbetare", 
+        "Husmontör"
+      ]
+    }, 
+    {
+      "Civilingenjörsyrken inom bygg och anläggning": [
+        "Civilingenjör, väg- och vattenbyggnad", 
+        "Civilingenjör, järnväg", 
+        "Civilingenjör, trafik", 
+        "Civilingenjör, väg", 
+        "Projekteringsingenjör, bygg och anläggning", 
+        "Civilingenjör, byggnadskonstruktion", 
+        "Civilingenjör, anläggning", 
+        "Civilingenjör, bygg"
+      ]
+    }, 
+    {
+      "Ingenjörer och tekniker inom bygg och anläggning": [
+        "Vägingenjör", 
+        "Entreprenadingenjör", 
+        "Produktionsingenjör, bygg", 
+        "Markingenjör", 
+        "Väg- och vattenbyggnadsingenjör", 
+        "Drift- och underhållsingenjör, anläggning", 
+        "Byggnadskalkylator/Anbudsingenjör", 
+        "Byggnadsingenjör", 
+        "Fastighetsingenjör", 
+        "Byggledare", 
+        "Byggnadskonstruktör", 
+        "Trafikingenjör", 
+        "Byggnadskonsult", 
+        "Järnvägsingenjör", 
+        "Projektledare, bygg och anläggning"
+      ]
+    }, 
+    {
+      "Kyl- och värmepumpstekniker m.fl.": [
+        "Kylmontör/Kyltekniker", 
+        "Kyl- och värmepumpsmontör", 
+        "Kyl- och värmepumpstekniker"
+      ]
+    }, 
+    {
+      "Träarbetare, snickare m.fl.": [
+        "Träarbetare/Snickare", 
+        "Träarbetare, utan yrkesbevis/Snickare, utan yrkesbevis"
+      ]
+    }, 
+    {
+      "Murare m.fl.": [
+        "Murare", 
+        "Plattsättare"
+      ]
+    }, 
+    {
+      "Betongarbetare": [
+        "Betongarbetare, utan yrkesbevis", 
+        "Betongarbetare"
+      ]
+    }, 
+    {
+      "Brunnsborrare m.fl.": []
+    }, 
+    {
+      "Takmontörer": [
+        "Tak- och tätskiktsmontör, utan yrkesbevis", 
+        "Tak- och tätskiktsmontör"
+      ]
+    }, 
+    {
+      "Arbetsledare inom bygg, anläggning och gruva": [
+        "Arbetsledare, VVS", 
+        "Arbetsledare, anläggning", 
+        "Arbetsledare, ventilation", 
+        "Arbetsledare, husbyggnad"
+      ]
+    }, 
+    {
+      "Ställningsbyggare": [
+        "Ställningsbyggare"
+      ]
+    }, 
+    {
+      "Målare": [
+        "Målare"
+      ]
+    }, 
+    {
+      "Gruv- och stenbrottsarbetare": [
+        "Bergarbetare, gruva"
+      ]
+    }, 
+    {
+      "Byggnads- och ventilationsplåtslagare": [
+        "Byggnadsplåtslagare"
+      ]
+    }, 
+    {
+      "Kranförare m.fl.": []
+    }, 
+    {
+      "Isoleringsmontörer": []
+    }, 
+    {
+      "VVS-montörer m.fl.": [
+        "Ventilationsmontör", 
+        "Ventilationstekniker", 
+        "VVS-montör", 
+        "Industrirörmontör"
+      ]
+    }, 
+    {
+      "Golvläggare": [
+        "Golvläggare"
+      ]
+    }, 
+    {
+      "Anläggningsdykare": []
+    }
+  ], 
+  "Data/IT": [
+    {
+      "Webbmaster och webbadministratörer": [
+        "Webbtekniker", 
+        "Webmaster", 
+        "Webbansvarig/Webbstrateg"
+      ]
+    }, 
+    {
+      "Systemförvaltare m.fl.": [
+        "IT-samordnare", 
+        "Systemförvaltare", 
+        "Systemansvarig"
+      ]
+    }, 
+    {
+      "Drifttekniker, IT": [
+        "Driftledare, IT", 
+        "Dataoperatör", 
+        "IT-tekniker/Datatekniker", 
+        "Drifttekniker, data"
+      ]
+    }, 
+    {
+      "Mjukvaru- och systemutvecklare m.fl.": [
+        "Data Warehouse specialist", 
+        "Projektledare, IT", 
+        "Databasutvecklare", 
+        "Systemdesigner", 
+        "Systemutvecklare/Programmerare", 
+        "Backend-utvecklare", 
+        "Civilingenjör, systemutveckling", 
+        "Frontend-utvecklare", 
+        "Applikationsutvecklare", 
+        "Databasdesigner", 
+        "Mjukvaruutvecklare"
+      ]
+    }, 
+    {
+      "Systemanalytiker och IT-arkitekter m.fl.": [
+        "Affärskonsult, IT", 
+        "Systemarkitekt", 
+        "Verksamhetskonsult, IT", 
+        "Enterprise Architect", 
+        "Configuration Manager/CM", 
+        "Infrastrukturarkitekt", 
+        "Systemanalytiker/Systemutredare", 
+        "IT-utredare", 
+        "IT-arkitekt/Lösningsarkitekt", 
+        "Metodanalytiker, IT", 
+        "Kravanalytiker"
+      ]
+    }, 
+    {
+      "Systemtestare och testledare": [
+        "Testledare/QA lead", 
+        "Speltestare", 
+        "Systemtestare/Funktionstestare"
+      ]
+    }, 
+    {
+      "Nätverks- och systemtekniker m.fl.": [
+        "Nätverkskonstruktör", 
+        "Nätverkstekniker", 
+        "Kommunikationstekniker", 
+        "Nätverksoperatör"
+      ]
+    }, 
+    {
+      "Supporttekniker, IT": [
+        "Helpdesktekniker/Supporttekniker"
+      ]
+    }, 
+    {
+      "Övriga IT-specialister": [
+        "IT-strateg", 
+        "Interaktionsdesigner", 
+        "Processansvarig, ITIL", 
+        "Forskare, IT"
+      ]
+    }, 
+    {
+      "Utvecklare inom spel och digitala media": []
+    }, 
+    {
+      "IT-säkerhetsspecialister": [
+        "IT-säkerhetschef/IT security manager", 
+        "Säkerhetsadministratör, IT", 
+        "IT-säkerhetsansvarig", 
+        "Datasäkerhetsansvarig", 
+        "IT-forensiker", 
+        "IT-säkerhetsanalytiker"
+      ]
+    }, 
+    {
+      "Systemadministratörer": [
+        "Databasadministratör", 
+        "Nätverksansvarig", 
+        "Systemadministratör", 
+        "Nätverksadministratör"
+      ]
+    }
+  ], 
+  "Kropps- och skönhetsvård": [
+    {
+      "Frisörer": [
+        "Frisör"
+      ]
+    }, 
+    {
+      "Fotterapeuter": [
+        "Medicinsk fotterapeut"
+      ]
+    }, 
+    {
+      "Hudterapeuter": [
+        "Hudterapeut"
+      ]
+    }, 
+    {
+      "Övriga skönhets- och kroppsterapeuter": [
+        "Nagelterapeut/Nagelteknolog"
+      ]
+    }, 
+    {
+      "Massörer och massageterapeuter": [
+        "Massör/Massageterapeut"
+      ]
+    }
+  ], 
+  "Försäljning, inköp, marknadsföring": [
+    {
+      "Butikssäljare, fackhandel": [
+        "Maskinsäljare, entreprenad", 
+        "Bilförsäljare", 
+        "Butikssäljare, fackhandel", 
+        "Lastbilssäljare", 
+        "Florist"
+      ]
+    }, 
+    {
+      "Bensinstationspersonal": [
+        "Bensinstationsbiträde/Servicebiträde"
+      ]
+    }, 
+    {
+      "Uthyrare": [
+        "Uthyrare", 
+        "Biluthyrare"
+      ]
+    }, 
+    {
+      "Eventsäljare och butiksdemonstratörer m.fl.": [
+        "Hemförsäljare", 
+        "Butiksdemonstratör", 
+        "Demonstratör", 
+        "Eventsäljare/Eventförsäljare"
+      ]
+    }, 
+    {
+      "Speditörer och transportmäklare": [
+        "Speditör", 
+        "Tullhandläggare/Tulladministratör", 
+        "Transportadministratör"
+      ]
+    }, 
+    {
+      "Ordersamordnare m.fl.": [
+        "Offertberedare", 
+        "Orderplanerare", 
+        "Orderadministratör"
+      ]
+    }, 
+    {
+      "Apotekstekniker": [
+        "Apotekstekniker"
+      ]
+    }, 
+    {
+      "Marknadsanalytiker och marknadsförare m.fl.": [
+        "Produktchef, marknadsföring", 
+        "Marknadsplanerare", 
+        "Marknadskonsult", 
+        "Marknadsanalytiker", 
+        "Marknadskommunikatör", 
+        "Anbudsansvarig/Bid Manager", 
+        "Marknadsförare", 
+        "Projektledare, reklam", 
+        "Marknadskoordinator", 
+        "Relationsmarknadsförare"
+      ]
+    }, 
+    {
+      "Guider och reseledare": [
+        "Turistvärd/Turistvärdinna", 
+        "Guide"
+      ]
+    }, 
+    {
+      "Säljande butikschefer och avdelningschefer i butik": [
+        "Biträdande butikschef/Säljande butikschef", 
+        "Avdelningschef, butik", 
+        "Kaféföreståndare", 
+        "Butiksansvarig"
+      ]
+    }, 
+    {
+      "Telefonförsäljare m.fl.": [
+        "Telefonförsäljare", 
+        "Medlemsvärvare, intresseorganisation/Telefonkommunikatör", 
+        "Abonnemangsförsäljare"
+      ]
+    }, 
+    {
+      "Marknads- och försäljningsassistenter": [
+        "Marknadsassistent", 
+        "Försäljningsassistent/Säljadministratör"
+      ]
+    }, 
+    {
+      "Evenemangs- och reseproducenter m.fl.": []
+    }, 
+    {
+      "Inköpare och upphandlare": [
+        "Inköpsledare", 
+        "Inköpare", 
+        "Upphandlare", 
+        "Kategorichef/Kategoriansvarig"
+      ]
+    }, 
+    {
+      "Kassapersonal m.fl.": [
+        "Valutaförsäljare", 
+        "Kioskbiträde", 
+        "Kassapersonal"
+      ]
+    }, 
+    {
+      "Marknadsundersökare och intervjuare": [
+        "Marknadsundersökare/Intervjuare"
+      ]
+    }, 
+    {
+      "Resesäljare och trafikassistenter m.fl.": [
+        "Resesäljare/Reseförsäljare/Resekonsulent", 
+        "Turistinformatör", 
+        "Affärsresesäljare", 
+        "Trafikassistent"
+      ]
+    }, 
+    {
+      "Övriga förmedlare": [
+        "Butikskonsulent", 
+        "Manager", 
+        "Kundmottagare, bilverkstad/Verkmästare, bilverkstad", 
+        "Mediasäljare", 
+        "Servicechef, bilverkstad"
+      ]
+    }, 
+    {
+      "Företagssäljare": [
+        "Fältsäljare/Utesäljare", 
+        "Systemsäljare", 
+        "Innesäljare", 
+        "Säljledare", 
+        "Säljkonsulent", 
+        "Key account manager", 
+        "Account manager", 
+        "Internationell säljare/Exportsäljare"
+      ]
+    }, 
+    {
+      "Torg- och marknadsförsäljare m.fl.": [
+        "Torgförsäljare/Marknadsförsäljare"
+      ]
+    }, 
+    {
+      "Butikssäljare, dagligvaror": [
+        "Butikssäljare, dagligvaror/Medarbetare, dagligvaror", 
+        "Charkuteriarbetare, butik"
+      ]
+    }, 
+    {
+      "Inköps- och orderassistenter": [
+        "Inköpsassistent/Inköpskontorist/Inköpssekreterare", 
+        "Ordermottagare"
+      ]
+    }, 
+    {
+      "Optikerassistenter": [
+        "Optikerassistent"
+      ]
+    }, 
+    {
+      "Fastighetsmäklare": [
+        "Fastighetsmäklare"
+      ]
+    }
+  ], 
+  "Hantverk": [
+    {
+      "Läderhantverkare och skomakare": []
+    }, 
+    {
+      "Sömmare": []
+    }, 
+    {
+      "Skräddare och ateljésömmerskor m.fl.": []
+    }, 
+    {
+      "Smeder": [
+        "Smed", 
+        "Byggnadssmed"
+      ]
+    }, 
+    {
+      "Fin-, inrednings- och möbelsnickare": [
+        "Inredningssnickare/Specialsnickare"
+      ]
+    }, 
+    {
+      "Manuella ytbehandlare, trä": []
+    }, 
+    {
+      "Guld- och silversmeder": []
+    }, 
+    {
+      "Tapetserare": []
+    }, 
+    {
+      "Bagare och konditorer": [
+        "Bagare/Konditor"
+      ]
+    }, 
+    {
+      "Finmekaniker": [
+        "Låssmed/Låstekniker", 
+        "Hjälpmedelstekniker"
+      ]
+    }, 
+    {
+      "Musikinstrumentmakare och övriga konsthantverkare": []
+    }, 
+    {
+      "Glastekniker": []
+    }
+  ], 
+  "Hotell, restaurang, storhushåll": [
+    {
+      "Storhushållsföreståndare": [
+        "Husmor", 
+        "Ekonomiföreståndare/Kursgårdsföreståndare/Storhushållsföreståndare", 
+        "Kostchef", 
+        "Kostekonom"
+      ]
+    }, 
+    {
+      "Hovmästare och servitörer": [
+        "Hovmästare", 
+        "Servitör/Servitris"
+      ]
+    }, 
+    {
+      "Bartendrar": [
+        "Bartender", 
+        "Barista/Kaffebartender"
+      ]
+    }, 
+    {
+      "Hotellreceptionister m.fl.": [
+        "Receptionschef", 
+        "Konferensvärd/Konferensvärdinna", 
+        "Nattreceptionist/Nattportier", 
+        "Campingplatsföreståndare", 
+        "Hotellvärd/Hotellvärdinna", 
+        "Hotellreceptionist"
+      ]
+    }, 
+    {
+      "Restaurang- och köksbiträden m.fl.": [
+        "Restaurangbiträde", 
+        "Diskare", 
+        "Köksbiträde", 
+        "Ekonomibiträde, storhushåll", 
+        "Cateringarbetare", 
+        "Frukostvärd/Frukostvärdinna", 
+        "Måltidsbiträde"
+      ]
+    }, 
+    {
+      "Kafé- och konditoribiträden": [
+        "Kafébiträde/Konditoribiträde"
+      ]
+    }, 
+    {
+      "Kockar och kallskänkor": [
+        "Kock, storhushåll", 
+        "Kock, à la carte", 
+        "Kallskänka"
+      ]
+    }, 
+    {
+      "Croupierer och oddssättare m.fl.": []
+    }, 
+    {
+      "Köksmästare och souschefer": [
+        "Souschef", 
+        "Köksmästare"
+      ]
+    }, 
+    {
+      "Pizzabagare m.fl.": [
+        "Grillkock, snabbmat", 
+        "Pizzabagare", 
+        "Grillbiträde/Gatuköksbiträde"
+      ]
+    }
+  ], 
+  "Hälso- och sjukvård": [
+    {
+      "Barnsköterskor": [
+        "Barnsköterska"
+      ]
+    }, 
+    {
+      "Skolsköterskor": [
+        "Skolsköterska"
+      ]
+    }, 
+    {
+      "Grundutbildade sjuksköterskor": [
+        "Sjuksköterska, medicin och kirurgi", 
+        "Sjuksköterska, grundutbildad"
+      ]
+    }, 
+    {
+      "Undersköterskor, hemtjänst, hemsjukvård, äldreboende och habilitering": [
+        "Hemsjukvårdare", 
+        "Undersköterska, hemtjänst, äldreboende och habilitering"
+      ]
+    }, 
+    {
+      "Ambulanssjuksköterskor m.fl.": [
+        "Akutsjuksköterska/Sjuksköterska, akutmottagning", 
+        "Ambulanssjuksköterska"
+      ]
+    }, 
+    {
+      "Terapeuter inom alternativmedicin": []
+    }, 
+    {
+      "Apotekare": [
+        "Apotekare"
+      ]
+    }, 
+    {
+      "Ambulanssjukvårdare": [
+        "Ambulanssjukvårdare"
+      ]
+    }, 
+    {
+      "Receptarier": [
+        "Receptarie"
+      ]
+    }, 
+    {
+      "Tandsköterskor": [
+        "Tandsköterska"
+      ]
+    }, 
+    {
+      "Övrig vård- och omsorgspersonal": [
+        "Laboratoriebiträde"
+      ]
+    }, 
+    {
+      "Röntgensjuksköterskor": [
+        "Röntgensjuksköterska"
+      ]
+    }, 
+    {
+      "Specialistläkare": []
+    }, 
+    {
+      "Distriktssköterskor": [
+        "Distriktssköterska"
+      ]
+    }, 
+    {
+      "Psykologer": [
+        "PTP-psykolog", 
+        "Psykolog", 
+        "Klinisk psykolog", 
+        "Barnpsykolog", 
+        "Arbetspsykolog/Organisationspsykolog", 
+        "Skolpsykolog"
+      ]
+    }, 
+    {
+      "Vårdbiträden": [
+        "Hemvårdare", 
+        "Sjukvårdsbiträde/Servicevärd inom vården", 
+        "Vårdbiträde"
+      ]
+    }, 
+    {
+      "Veterinärer": [
+        "Veterinär"
+      ]
+    }, 
+    {
+      "Tandhygienister": [
+        "Tandhygienist"
+      ]
+    }, 
+    {
+      "Djursjukskötare m.fl.": [
+        "Djursjukskötare"
+      ]
+    }, 
+    {
+      "Audionomer och logopeder": [
+        "Logoped", 
+        "Audionom"
+      ]
+    }, 
+    {
+      "Företagssköterskor": [
+        "Företagssjuksköterska/Företagssköterska"
+      ]
+    }, 
+    {
+      "Psykiatrisjuksköterskor": [
+        "Sjuksköterska, psykiatrisk vård"
+      ]
+    }, 
+    {
+      "Intensivvårdssjuksköterskor": [
+        "Intensivvårdssjuksköterska"
+      ]
+    }, 
+    {
+      "Tandläkare": [
+        "Specialisttandläkare", 
+        "Tandläkare"
+      ]
+    }, 
+    {
+      "Optiker": [
+        "Optiker/Optometrist"
+      ]
+    }, 
+    {
+      "Arbetsterapeuter": [
+        "Hjälpmedelskonsulent", 
+        "Arbetsterapeut"
+      ]
+    }, 
+    {
+      "Undersköterskor, vård- och specialavdelning och mottagning": [
+        "Steriltekniker/Undersköterska, sterilcentral", 
+        "Undersköterska, vård- och specialavdelning och mottagning"
+      ]
+    }, 
+    {
+      "Skötare": [
+        "Skötare (inom psykiatrisk vård)"
+      ]
+    }, 
+    {
+      "Kiropraktorer och naprapater m.fl.": []
+    }, 
+    {
+      "Fysioterapeuter och sjukgymnaster": [
+        "Fysioterapeut"
+      ]
+    }, 
+    {
+      "Barnsjuksköterskor": [
+        "Barnsjuksköterska", 
+        "Barnsjuksköterska, mottagning/Barnsjuksköterska, vårdcentral", 
+        "Sjuksköterska, barnavårdscentral", 
+        "Barnsjuksköterska, vårdavdelning"
+      ]
+    }, 
+    {
+      "Psykoterapeuter": [
+        "Psykoterapeut"
+      ]
+    }, 
+    {
+      "Övriga specialistsjuksköterskor": [
+        "Medicinskt ansvarig sjuksköterska/MAS", 
+        "Onkologisjuksköterska", 
+        "Ögonsjuksköterska/Oftalmologassistent"
+      ]
+    }, 
+    {
+      "Övriga läkare": [
+        "Läkare"
+      ]
+    }, 
+    {
+      "Geriatriksjuksköterskor": [
+        "Sjuksköterska, geriatrik/Sjuksköterska, äldreomsorg och äldrevård"
+      ]
+    }, 
+    {
+      "Anestesisjuksköterskor": [
+        "Anestesisjuksköterska"
+      ]
+    }, 
+    {
+      "AT-läkare": [
+        "AT-läkare"
+      ]
+    }, 
+    {
+      "Dietister": [
+        "Dietist"
+      ]
+    }, 
+    {
+      "Barnmorskor": [
+        "Barnmorska, ungdomsmottagning", 
+        "Barnmorska", 
+        "Barnmorska, förlossning", 
+        "Barnmorska, öppen vård/Barnmorska, mödravård"
+      ]
+    }, 
+    {
+      "ST-läkare": []
+    }, 
+    {
+      "Övriga specialister inom hälso- och sjukvård": []
+    }, 
+    {
+      "Operationssjuksköterskor": [
+        "Operationssjuksköterska"
+      ]
+    }
+  ], 
+  "Industriell tillverkning": [
+    {
+      "Maskinoperatörer, ytbehandling": [
+        "Maskinoperatör, ytbehandling, metall"
+      ]
+    }, 
+    {
+      "Montörer, elektrisk och elektronisk utrustning": [
+        "Elektronikmontör", 
+        "Elmontör"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, kött- och fiskberedningsindustri": [
+        "Maskinoperatör, foder", 
+        "Maskinoperatör, kött"
+      ]
+    }, 
+    {
+      "Övriga maskinoperatörer, livsmedelsindustri m.m.": [
+        "Bryggeritekniker", 
+        "Maskinoperatör, livsmedelsindustri"
+      ]
+    }, 
+    {
+      "Processoperatörer, stenkross- och malmförädling": []
+    }, 
+    {
+      "Maskinställare och maskinoperatörer, metallarbete": [
+        "Laseroperatör/Laserskärare", 
+        "Excenterpressare/Pressoperatör, metallarbete", 
+        "Verkstadsmekaniker/Verkstadstekniker", 
+        "Kantpressare", 
+        "Robotsvetsare", 
+        "Maskinställare", 
+        "Svetsoperatör/Automatsvetsare", 
+        "CNC-operatör/FMS-operatör", 
+        "Svarvare", 
+        "Fräsare", 
+        "Maskinoperatör, mekanisk verkstad"
+      ]
+    }, 
+    {
+      "Provsmakare och kvalitetsbedömare": [
+        "Kvalitetsbedömare, livsmedel"
+      ]
+    }, 
+    {
+      "Bokbindare m.fl.": []
+    }, 
+    {
+      "Operatörer inom sågverk, hyvleri och plywood m.m.": [
+        "Sågverksoperatör"
+      ]
+    }, 
+    {
+      "Lackerare och industrimålare": [
+        "Fordonslackerare", 
+        "Lackerare", 
+        "Industrilackerare"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, påfyllning, packning och märkning": []
+    }, 
+    {
+      "Montörer, metall-, gummi- och plastprodukter": [
+        "Montör, gummi- och plastprodukter", 
+        "Däckmontör/Däck- och hjulmekaniker", 
+        "Montör, metallprodukter"
+      ]
+    }, 
+    {
+      "Slipare m.fl.": [
+        "Slipare, metall"
+      ]
+    }, 
+    {
+      "Stenhuggare m.fl.": []
+    }, 
+    {
+      "Verktygsmakare": [
+        "Verktygsmakare"
+      ]
+    }, 
+    {
+      "Montörer, träprodukter": [
+        "Möbelmontör/Inredningsmontör", 
+        "Montör, träprodukter"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, gummiindustri": [
+        "Maskinoperatör, gummiindustri"
+      ]
+    }, 
+    {
+      "Valsverksoperatörer": []
+    }, 
+    {
+      "Slaktare och styckare m.fl.": []
+    }, 
+    {
+      "Maskinsnickare och maskinoperatörer, träindustri": [
+        "Maskinsnickare, trävaruindustri/Operatör, trävaruindustri", 
+        "CNC-operatör, trä", 
+        "Trähusarbetare/Spikare", 
+        "Maskinsnickare, snickeri/Operatör, snickeri/Operatör, inredning"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, cement-, sten- och betongvaror": [
+        "Processoperatör, betong"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, kemisktekniska och fotografiska produkter": []
+    }, 
+    {
+      "Maskinoperatörer, pappersvaruindustri": [
+        "Maskinoperatör, pappersvaruindustri"
+      ]
+    }, 
+    {
+      "Gjutare": [
+        "Gjutare"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, blekning, färgning och tvättning": []
+    }, 
+    {
+      "Övriga maskin- och processoperatörer vid stål- och metallverk": [
+        "Gjuterioperatör", 
+        "Maskinoperatör, metallformning"
+      ]
+    }, 
+    {
+      "Tunnplåtslagare": [
+        "Plåtbearbetare", 
+        "Bilplåtslagare/Bilskade- och karosserireparatör"
+      ]
+    }, 
+    {
+      "Tryckare": [
+        "Maskinoperatör, tryckeri"
+      ]
+    }, 
+    {
+      "Övriga maskinoperatörer, textil-, skinn- och läderindustri": []
+    }, 
+    {
+      "Övriga montörer": [
+        "Montör, papp- och textilprodukter"
+      ]
+    }, 
+    {
+      "Handpaketerare och andra fabriksarbetare": [
+        "Handpaketerare", 
+        "Packare"
+      ]
+    }, 
+    {
+      "Bergsprängare": []
+    }, 
+    {
+      "Processoperatörer, pappersmassa": [
+        "Processoperatör, pappersmassa"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, farmaceutiska produkter": [
+        "Maskinoperatör, hygienteknik"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, kvarn-, bageri- och konfektyrindustri": [
+        "Processoperatör, kvarn", 
+        "Maskinoperatör, bageri", 
+        "Maskinoperatör, konfektyrindustri"
+      ]
+    }, 
+    {
+      "Maskinoperatörer inom ytbehandling, trä": [
+        "Maskinoperatör, ytbehandling, trä"
+      ]
+    }, 
+    {
+      "Processoperatörer, papper": [
+        "Processoperatör, papper"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, mejeri": [
+        "Livsmedelsarbetare, mejeri", 
+        "Processoperatör, mejeri"
+      ]
+    }, 
+    {
+      "Stålkonstruktionsmontörer och grovplåtsslagare": [
+        "Metallkonstruktionsmontör"
+      ]
+    }, 
+    {
+      "Fordonsmontörer": [
+        "Fordonsmontör", 
+        "Motormontör"
+      ]
+    }, 
+    {
+      "Övriga process- och maskinoperatörer": [
+        "Processoperatör, glas"
+      ]
+    }, 
+    {
+      "Maskinoperatörer, plastindustri": [
+        "Plastmaskinoperatör"
+      ]
+    }, 
+    {
+      "Prepresstekniker": [
+        "Grafisk operatör"
+      ]
+    }, 
+    {
+      "Arbetsledare inom tillverkning": [
+        "Arbetsledare, maskintillverkning, verkstadsprodukter", 
+        "Arbetsledare, tillverkning, textil- och träprodukter", 
+        "Arbetsledare, tillverkning kemiska produkter", 
+        "Arbetsledare, tillverkning, elektroniska produkter"
+      ]
+    }, 
+    {
+      "Svetsare och gasskärare": [
+        "Svetsare, manuell"
+      ]
+    }
+  ], 
+  "Installation, drift, underhåll": [
+    {
+      "Övriga drifttekniker och processövervakare": [
+        "Industrirobotoperatör"
+      ]
+    }, 
+    {
+      "Installations- och serviceelektriker": [
+        "Installationselektriker", 
+        "Ledande montör, el", 
+        "Lärling, installationselektriker", 
+        "Serviceelektriker, installation"
+      ]
+    }, 
+    {
+      "Processövervakare, metallproduktion": [
+        "Processövervakare, metallproduktion"
+      ]
+    }, 
+    {
+      "Underhållsmekaniker och maskinreparatörer": [
+        "Maskinbyggare", 
+        "Maskinreparatör", 
+        "Installationstekniker", 
+        "Resemontör, maskin", 
+        "Maskinmontör", 
+        "Servicetekniker, tåg", 
+        "Kranmontör", 
+        "Vindkraftstekniker", 
+        "Underhållsmekaniker", 
+        "Lokreparatör", 
+        "Hydraulmontör", 
+        "Vagnreparatör, järnväg", 
+        "Maskinmekaniker, industri/Maskinmekaniker, varvsindustri"
+      ]
+    }, 
+    {
+      "Industrielektriker": [
+        "Industrielektriker", 
+        "Hiss- och rulltrappstekniker", 
+        "Fordonselektriker", 
+        "Elektromekaniker", 
+        "Elreparatör", 
+        "Maskinelektriker", 
+        "Automationselektriker", 
+        "Driftelektriker"
+      ]
+    }, 
+    {
+      "Motorfordonsmekaniker och fordonsreparatörer": [
+        "Marinmekaniker/Marintekniker", 
+        "Bussmekaniker", 
+        "Lastbilsmekaniker", 
+        "Reservdelsspecialist/Bildelsspecialist", 
+        "Småmaskinsmekaniker"
+      ]
+    }, 
+    {
+      "Processövervakare, kemisk industri": [
+        "Processoperatör, kemisk industri"
+      ]
+    }, 
+    {
+      "Elektronikreparatörer och kommunikationselektriker m.fl.": [
+        "Fibertekniker/Fiberinstallatör", 
+        "Larminstallatör/Larmtekniker", 
+        "Servicetekniker, elektronik", 
+        "Servicetekniker, data", 
+        "Instrumentelektriker/Instrumenttekniker", 
+        "Elektronikreparatör", 
+        "Signaltekniker", 
+        "Styr- och reglertekniker", 
+        "Hushållsmaskinreparatör/Vitvarureparatör", 
+        "Teletekniker", 
+        "Servicetekniker, kontorsmaskiner"
+      ]
+    }, 
+    {
+      "Distributionselektriker": [
+        "Linjemontör, elkraft", 
+        "Distributionselektriker", 
+        "Servicetekniker, elkraft"
+      ]
+    }, 
+    {
+      "Övriga servicearbetare": [
+        "Diversearbetare"
+      ]
+    }, 
+    {
+      "Vaktmästare m.fl.": [
+        "Kontorsvaktmästare", 
+        "Sjukhusvaktmästare", 
+        "Hotellvaktmästare/Piccolo"
+      ]
+    }, 
+    {
+      "Flygmekaniker m.fl.": []
+    }, 
+    {
+      "Drifttekniker vid värme- och vattenverk": [
+        "Drifttekniker vattenverk VA", 
+        "Arbetsledare, elkraft", 
+        "Drifttekniker reningsverk VA", 
+        "Drifttekniker, värmeverk", 
+        "Drifttekniker, förbränningsstation"
+      ]
+    }, 
+    {
+      "Fastighetsskötare": [
+        "Bovärd/Fastighetsvärd/Husvärd", 
+        "Idrottsplatsvaktmästare/Idrottsplatsarbetare", 
+        "Fastighetsskötare/Fastighetsarbetare", 
+        "Fastighetstekniker/Drifttekniker, fastighet", 
+        "Skolvaktmästare", 
+        "Driftchef, fastighet", 
+        "Kyrkvaktmästare"
+      ]
+    }
+  ], 
+  "Kultur, media, design": [
+    {
+      "Författare m.fl.": []
+    }, 
+    {
+      "Skådespelare": [
+        "Skådespelare"
+      ]
+    }, 
+    {
+      "Journalister m.fl.": [
+        "Webbredaktör", 
+        "Redaktör", 
+        "Journalist/Reporter"
+      ]
+    }, 
+    {
+      "Regissörer och producenter av film, teater m.m.": [
+        "Projektledare: kultur, media, film, dataspel", 
+        "Producent: kultur, media, film, dataspel", 
+        "Koordinator: kultur, media, film, dataspel"
+      ]
+    }, 
+    {
+      "Bild- och sändningstekniker": []
+    }, 
+    {
+      "Inredare, dekoratörer och scenografer m.fl.": [
+        "Butikskommunikatör/Visual merchandiser"
+      ]
+    }, 
+    {
+      "Övriga designer och formgivare": [
+        "Designer"
+      ]
+    }, 
+    {
+      "Musiker, sångare och kompositörer": []
+    }, 
+    {
+      "Industridesigner": [
+        "Industridesigner"
+      ]
+    }, 
+    {
+      "Designer inom spel och digitala medier": [
+        "Animator/Animatör", 
+        "3D artist/3D-grafiker", 
+        "Webbdesigner", 
+        "Game designer/Speldesigner"
+      ]
+    }, 
+    {
+      "Bibliotekarier och arkivarier": [
+        "Informationsspecialist", 
+        "Bibliotekarie", 
+        "Dokumentalist", 
+        "Arkivarie", 
+        "Skolbibliotekarie"
+      ]
+    }, 
+    {
+      "Koreografer och dansare": []
+    }, 
+    {
+      "Övriga yrken inom kultur och underhållning": [
+        "Programvärd/Programvärdinna"
+      ]
+    }, 
+    {
+      "Ljus-, ljud- och scentekniker": [
+        "Ljudtekniker", 
+        "Teatertekniker/Scentekniker", 
+        "AV-tekniker"
+      ]
+    }, 
+    {
+      "Översättare, tolkar och lingvister m.fl.": [
+        "Tolk", 
+        "Kontakttolk/Dialogtolk"
+      ]
+    }, 
+    {
+      "Inspicienter och scriptor m.fl.": [
+        "Produktionsassistent: kultur, media, film, dataspel"
+      ]
+    }, 
+    {
+      "Fotografer": [
+        "Fotograf"
+      ]
+    }, 
+    {
+      "Grafiska formgivare m.fl.": [
+        "Grafisk formgivare", 
+        "Art Director/AD", 
+        "Originalare/Final Art"
+      ]
+    }, 
+    {
+      "Bildkonstnärer m.fl.": [
+        "Konservator"
+      ]
+    }, 
+    {
+      "Museiintendenter m.fl.": [
+        "Antikvarie", 
+        "Bebyggelseantikvarie", 
+        "Museiintendent"
+      ]
+    }
+  ], 
+  "Sanering och renhållning": [
+    {
+      "Saneringsarbetare m.fl.": [
+        "Avloppstekniker", 
+        "Industrisanerare", 
+        "Saneringsarbetare"
+      ]
+    }, 
+    {
+      "Städledare och husfruar": [
+        "Arbetsledare, städ/Husfru/Städledare"
+      ]
+    }, 
+    {
+      "Bilrekonditionerare, fönsterputsare m.fl.": [
+        "Bilrekonditionerare", 
+        "Bilvårdare/Garagearbetare"
+      ]
+    }, 
+    {
+      "Övrig hemservicepersonal m.fl.": [
+        "Hemstädare/Hemhjälp", 
+        "Barnvakt"
+      ]
+    }, 
+    {
+      "Skorstensfejare": []
+    }, 
+    {
+      "Städare": [
+        "Hotellstädare", 
+        "Vagnsstädare", 
+        "Fastighetsstädare", 
+        "Städare/Lokalvårdare", 
+        "Kontorsstädare", 
+        "Sjukhusstädare"
+      ]
+    }, 
+    {
+      "Renhållnings- och återvinningsarbetare": [
+        "Demontör, återvinning", 
+        "Miljöarbetare/Renhållningsarbetare"
+      ]
+    }
+  ], 
+  "Naturbruk": [
+    {
+      "Uppfödare och skötare av lantbrukets husdjur": [
+        "Hästskötare"
+      ]
+    }, 
+    {
+      "Fiskodlare": []
+    }, 
+    {
+      "Bärplockare och plantörer m.fl.": []
+    }, 
+    {
+      "Odlare av jordbruksväxter, frukt och bär": []
+    }, 
+    {
+      "Skogsarbetare": [
+        "Skogsarbetare, röjning", 
+        "Arbetsledare, skogsbruk"
+      ]
+    }, 
+    {
+      "Förare av jordbruks- och skogsmaskiner": [
+        "Maskinförare, lantbruk/Traktorförare, lantbruk"
+      ]
+    }, 
+    {
+      "Specialister och rådgivare inom skogsbruk": [
+        "Virkesköpare/Virkesinköpare", 
+        "Skogskonsulent/Skogsvårdskonsulent"
+      ]
+    }, 
+    {
+      "Fiskare": []
+    }, 
+    {
+      "Specialister och rådgivare inom lantbruk m.m.": [
+        "Lantbruksrådgivare/Lantbrukskonsulent", 
+        "Landskapsingenjör", 
+        "Agronom"
+      ]
+    }, 
+    {
+      "Växtodlare och djuruppfödare, blandad drift": []
+    }, 
+    {
+      "Trädgårdsanläggare m.fl.": [
+        "Kyrkogårdsarbetare/Griftegårdsarbetare", 
+        "Trädgårdsanläggare/Trädgårdsanläggningsarbetare", 
+        "Trädgårdsmästare, anläggning", 
+        "Arbetsledare, trädgård/Trädgårdsanläggningsförman", 
+        "Parkarbetare/Utemiljöarbetare/Miljövärd"
+      ]
+    }, 
+    {
+      "Trädgårdsodlare": [
+        "Trädgårdsarbetare"
+      ]
+    }, 
+    {
+      "Uppfödare och skötare av sällskapsdjur": []
+    }, 
+    {
+      "Övriga djuruppfödare och djurskötare": [
+        "Djurvårdare"
+      ]
+    }
+  ], 
+  "Naturvetenskap": [
+    {
+      "Cell- och molekylärbiologer m.fl.": [
+        "Mikrobiolog", 
+        "Molekylärbiolog", 
+        "Civilingenjör, bioteknik", 
+        "Biolog", 
+        "Bioinformatiker"
+      ]
+    }, 
+    {
+      "Miljö- och hälsoskyddsinspektörer": [
+        "Miljö- och hälsoskyddsinspektör", 
+        "Livsmedelsinspektör", 
+        "Djurskyddsinspektör"
+      ]
+    }, 
+    {
+      "Kemister": [
+        "Kemist", 
+        "Biokemist", 
+        "Miljökemist", 
+        "Processkemist", 
+        "Materialkemist", 
+        "Organisk kemist", 
+        "Analytisk kemist"
+      ]
+    }, 
+    {
+      "Växt- och djurbiologer": [
+        "Botaniker", 
+        "Marinbiolog", 
+        "Limnolog", 
+        "Fiskeribiolog"
+      ]
+    }, 
+    {
+      "Biomedicinska analytiker m.fl.": [
+        "Biomedicinsk analytiker/BMA", 
+        "Laboratorieassistent"
+      ]
+    }, 
+    {
+      "Farmakologer och biomedicinare": [
+        "Regulatorisk handläggare/Regulatory affairs specialist", 
+        "Läkemedelsinspektör", 
+        "Forskare, farmakologi", 
+        "Biomedicinare"
+      ]
+    }, 
+    {
+      "Fysiker och astronomer": [
+        "Sjukhusfysiker", 
+        "Fysiker"
+      ]
+    }, 
+    {
+      "Matematiker och aktuarier": [
+        "Matematiker"
+      ]
+    }, 
+    {
+      "Meteorologer": []
+    }, 
+    {
+      "Geologer och geofysiker m.fl.": [
+        "Hydrogeolog", 
+        "Geolog", 
+        "Hydrolog"
+      ]
+    }, 
+    {
+      "Specialister inom miljöskydd och miljöteknik": [
+        "Miljösamordnare/Miljökoordinator", 
+        "Ekolog", 
+        "Miljöinspektör", 
+        "Miljöcontroller", 
+        "Miljöhandläggare", 
+        "Miljöingenjör/Miljövårdsingenjör"
+      ]
+    }
+  ], 
+  "Pedagogik": [
+    {
+      "Övriga universitets- och högskolelärare": [
+        "Universitets- och högskoleadjunkt"
+      ]
+    }, 
+    {
+      "Gymnasielärare": [
+        "Ämneslärare, gymnasieskolan", 
+        "Folkhögskolelärare", 
+        "Modersmålslärare i gymnasieskolan"
+      ]
+    }, 
+    {
+      "Idrottstränare och instruktörer m.fl.": [
+        "Instruktör inom specialidrott/Tränare inom specialidrott", 
+        "Idrottskonsulent", 
+        "Ungdomsinstruktör/Ungdomstränare", 
+        "Idrottsinstruktör/Idrottstränare", 
+        "Personlig tränare/PT", 
+        "Ridinstruktör/Ridlärare"
+      ]
+    }, 
+    {
+      "Professorer": [
+        "Professor"
+      ]
+    }, 
+    {
+      "Barnskötare": [
+        "Dagbarnvårdare", 
+        "Barnskötare"
+      ]
+    }, 
+    {
+      "Doktorander": [
+        "Doktorand"
+      ]
+    }, 
+    {
+      "Övriga pedagoger med teoretisk specialistkompetens": [
+        "Museipedagog/Museilärare", 
+        "SFI-lärare", 
+        "Lärare i kulturskolan", 
+        "Danspedagog", 
+        "Musikpedagog/Musiklärare"
+      ]
+    }, 
+    {
+      "Elevassistenter m.fl.": [
+        "Modersmålspedagog", 
+        "Skolvärd/Skolvärdinna", 
+        "Elevassistent", 
+        "Lärarassistent", 
+        "Pedagogassistent"
+      ]
+    }, 
+    {
+      "Förskollärare": [
+        "Förskollärare", 
+        "Lärare i förskoleklass"
+      ]
+    }, 
+    {
+      "Forskarassistenter m.fl.": [
+        "Forskarassistent"
+      ]
+    }, 
+    {
+      "Studie- och yrkesvägledare": [
+        "Studie- och yrkesvägledare", 
+        "Studievägledare"
+      ]
+    }, 
+    {
+      "Grundskollärare": [
+        "Modersmålslärare i grundskolan", 
+        "Ämneslärare, 7-9", 
+        "Grundlärare, förskoleklass och 1-3", 
+        "Grundlärare, 4-6"
+      ]
+    }, 
+    {
+      "Fritidspedagoger": [
+        "Grundlärare, fritidshem"
+      ]
+    }, 
+    {
+      "Övriga utbildare och instruktörer": [
+        "Datapedagog/IT-pedagog", 
+        "Cirkelledare/Studiecirkelledare", 
+        "Personalutbildare", 
+        "Kursutvecklare", 
+        "Utbildningsledare"
+      ]
+    }, 
+    {
+      "Lärare i yrkesämnen": [
+        "Yrkeslärare"
+      ]
+    }, 
+    {
+      "Speciallärare och specialpedagoger m.fl.": [
+        "Speciallärare", 
+        "Specialpedagog", 
+        "Synpedagog"
+      ]
+    }, 
+    {
+      "Universitets- och högskolelektorer": [
+        "Universitets- och högskolelektor", 
+        "Biträdande universitetslektor/Biträdande högskolelektor"
+      ]
+    }, 
+    {
+      "Professionella idrottsutövare": []
+    }, 
+    {
+      "Trafiklärare": [
+        "Trafiklärare"
+      ]
+    }
+  ], 
+  "Yrken med social inriktning": [
+    {
+      "Övrig servicepersonal": []
+    }, 
+    {
+      "Friskvårdskonsulenter och hälsopedagoger m.fl.": [
+        "Hälsopedagog"
+      ]
+    }, 
+    {
+      "Begravnings- och krematoriepersonal": []
+    }, 
+    {
+      "Övriga yrken inom socialt arbete": [
+        "Integrationshandläggare", 
+        "Frivårdsinspektör"
+      ]
+    }, 
+    {
+      "Biståndsbedömare m.fl.": [
+        "LSS-handläggare", 
+        "Biståndsbedömare/Biståndshandläggare"
+      ]
+    }, 
+    {
+      "Behandlingsassistenter och socialpedagoger m.fl.": [
+        "Alkohol- och drogterapeut", 
+        "Stödpedagog", 
+        "Habiliteringspedagog", 
+        "Rehabiliteringsassistent", 
+        "Behandlingsassistent/Socialpedagog", 
+        "Ungdomsassistent"
+      ]
+    }, 
+    {
+      "Präster": [
+        "Komminister"
+      ]
+    }, 
+    {
+      "Personliga assistenter": [
+        "Personlig assistent", 
+        "Personligt ombud", 
+        "Ledsagare"
+      ]
+    }, 
+    {
+      "Socialsekreterare": [
+        "Familjebehandlare/Familjepedagog", 
+        "Rehabhandläggare", 
+        "Socionom", 
+        "Familjerättssekreterare", 
+        "Gruppledare inom socialtjänst", 
+        "Socialsekreterare", 
+        "Fältassistent", 
+        "Familjerådgivare/Familjeterapeut", 
+        "Familjehemssekreterare/Familjehemskonsulent"
+      ]
+    }, 
+    {
+      "Vårdare, boendestödjare": [
+        "Stödassistent", 
+        "Habiliteringsassistent", 
+        "Vårdare/Arbetshandledare/Boendestödjare"
+      ]
+    }, 
+    {
+      "Fritidsledare m.fl.": [
+        "Fritidsledare, församling/Ungdomsledare, församling", 
+        "Fritidskonsulent", 
+        "Fritidsledare", 
+        "Ungdomskonsulent, fritid", 
+        "Fritidsassistent", 
+        "Ungdomsledare"
+      ]
+    }, 
+    {
+      "Kuratorer": [
+        "Skolkurator", 
+        "Kurator", 
+        "Samtalsterapeut"
+      ]
+    }, 
+    {
+      "Diakoner": []
+    }, 
+    {
+      "Pastorer m.fl.": []
+    }
+  ], 
+  "Säkerhet och bevakning": [
+    {
+      "Brandmän": [
+        "Brandman"
+      ]
+    }, 
+    {
+      "Övrig bevaknings- och säkerhetspersonal": [
+        "Parkeringsvakt/Trafikövervakare", 
+        "Badmästare/Badvakt"
+      ]
+    }, 
+    {
+      "Poliser": [
+        "Inspektör, Polisen"
+      ]
+    }, 
+    {
+      "Säkerhetsinspektörer m.fl.": [
+        "Säkerhetsrådgivare", 
+        "Säkerhetsingenjör", 
+        "Besiktningstekniker, bilprovning", 
+        "Riskingenjör, risk management", 
+        "Besiktningsingenjör"
+      ]
+    }, 
+    {
+      "Arbetsmiljöingenjörer, yrkes- och miljöhygieniker": [
+        "Arbetsmiljöingenjör", 
+        "Arbetsmiljöinspektör"
+      ]
+    }, 
+    {
+      "Tull- och kustbevakningstjänstemän": [
+        "Tulltjänsteman"
+      ]
+    }, 
+    {
+      "Kriminalvårdare": [
+        "Kriminalvårdare", 
+        "Arrestantvakt/Arrestvakt"
+      ]
+    }, 
+    {
+      "Brandingenjörer och byggnadsinspektörer m.fl.": [
+        "Brandtekniker", 
+        "Brandingenjör", 
+        "Byggnadsinspektör", 
+        "Energideklarerare/Energiexpert", 
+        "Energi- och klimatrådgivare", 
+        "Bygglovshandläggare"
+      ]
+    }, 
+    {
+      "Väktare och ordningsvakter": [
+        "Väktare", 
+        "Ordningsvakt", 
+        "Säkerhetsvakt"
+      ]
+    }, 
+    {
+      "SOS-operatörer m.fl.": [
+        "Larmoperatör"
+      ]
+    }
+  ], 
+  "Yrken med teknisk inriktning": [
+    {
+      "Civilingenjörsyrken inom elektroteknik": [
+        "Konstruktör, el-tele", 
+        "Utvecklingsingenjör, el-tele", 
+        "Processingenjör, el-tele", 
+        "Civilingenjör, el-tele", 
+        "Civilingenjör, konstruktion, elektronik", 
+        "Hårdvarukonstruktör", 
+        "Forskningsingenjör, el-tele", 
+        "Applikationsingenjör", 
+        "Civilingenjör, medicinsk teknik", 
+        "Utvecklingsingenjör, elkraft", 
+        "Civilingenjör, produktion, elektronik", 
+        "Civilingenjör, kvalitet, elektronik", 
+        "Underhållsanalytiker, elkraft", 
+        "Civilingenjör, elkraft", 
+        "Projekteringsingenjör, el-tele och elektronik"
+      ]
+    }, 
+    {
+      "Tekniker, bilddiagnostik och medicinteknisk utrustning": [
+        "Medicinteknisk ingenjör"
+      ]
+    }, 
+    {
+      "Laboratorieingenjörer": [
+        "Laboratorieingenjör, kemi", 
+        "Forskningslaborant, kemi", 
+        "Laborant, biologi", 
+        "Laborant, kemi", 
+        "Laboratorietekniker, kemi"
+      ]
+    }, 
+    {
+      "Civilingenjörsyrken inom kemi och kemiteknik": [
+        "Utvecklingsingenjör, kemi", 
+        "Civilingenjör, kvalitet, kemiteknik", 
+        "Civilingenjör, kemi", 
+        "Civilingenjör, forskning och utveckling, kemi", 
+        "Civilingenjör, process, kemiteknik", 
+        "Civilingenjör, kemiteknik", 
+        "Forskningsingenjör, kemi", 
+        "Processutvecklare, kemi"
+      ]
+    }, 
+    {
+      "Civilingenjörsyrken inom gruvteknik och metallurgi": [
+        "Civilingenjör, produktion, gruv, metallurgi", 
+        "Geotekniker"
+      ]
+    }, 
+    {
+      "Ingenjörer och tekniker inom industri, logistik och produktionsplanering": [
+        "Inköpsplanerare", 
+        "SQE Supplier Quality Engineer"
+      ]
+    }, 
+    {
+      "Arkitekter m.fl.": [
+        "Arkitekt"
+      ]
+    }, 
+    {
+      "Övriga civilingenjörsyrken": [
+        "Standardiseringsingenjör", 
+        "Produktutvecklare", 
+        "Civilingenjör, teknisk fysik", 
+        "Kontrollingenjör"
+      ]
+    }, 
+    {
+      "Fastighetsförvaltare": [
+        "Fastighetsassistent", 
+        "Bostadsförvaltare", 
+        "Fastighetsförvaltare"
+      ]
+    }, 
+    {
+      "Landskapsarkitekter": [
+        "Landskapsarkitekt"
+      ]
+    }, 
+    {
+      "Flygtekniker": [
+        "Flygtekniker"
+      ]
+    }, 
+    {
+      "Civilingenjörsyrken inom logistik och produktionsplanering": [
+        "Materialplanerare", 
+        "Logistiker", 
+        "Logistikingenjör"
+      ]
+    }, 
+    {
+      "GIS- och kartingenjörer": [
+        "Mätningstekniker, bygg", 
+        "GIS-ingenjör", 
+        "Mätningsingenjör/MBK-ingenjör", 
+        "Kartingenjör"
+      ]
+    }, 
+    {
+      "Ingenjörer och tekniker inom maskinteknik": [
+        "Automationstekniker, tillverkningsindustri", 
+        "Fordonsingenjör", 
+        "VVS-tekniker", 
+        "Produktionstekniker, maskin/Produktionstekniker, verkstad", 
+        "Kundserviceingenjör, tillverkningsindustri", 
+        "Ritare, maskin", 
+        "Maskinkonstruktör", 
+        "Planeringsingenjör, maskin", 
+        "Kalibreringsingenjör, tillverkningsindustri", 
+        "Konstruktör, tillverkningsindustri", 
+        "Ventilationsingenjör", 
+        "Produktionsingenjör, maskin", 
+        "Produktionsplanerare, tillverkningsindustri", 
+        "Automationstekniker, maskin", 
+        "Kvalitetsingenjör, maskin/Kvalitetstekniker, maskin", 
+        "Serviceingenjör, maskin", 
+        "Driftingenjör, VA", 
+        "Driftingenjör, värmeverk", 
+        "Produktionsledare, tillverkningsindustri", 
+        "Kontrollingenjör, maskin", 
+        "Automationsingenjör, maskin", 
+        "VVS-ingenjör", 
+        "Processtekniker, tillverkningsindustri"
+      ]
+    }, 
+    {
+      "Tandtekniker och ortopedingenjörer m.fl.": []
+    }, 
+    {
+      "Övriga ingenjörer och tekniker": [
+        "Kvalitetsingenjör, textil, trä, glas, förpackningar", 
+        "Mättekniker, metallprodukter", 
+        "Produktionsingenjör, textil, trä, glas, förpackningar", 
+        "Fältgeotekniker", 
+        "Mättekniker, geologi", 
+        "Kvalitetsmätare, metallprodukter", 
+        "Konstruktör, textil, trä, glas, förpackningar"
+      ]
+    }, 
+    {
+      "Planeringsarkitekter m.fl.": [
+        "Planeringsarkitekt/Fysisk planerare", 
+        "Planarkitekt"
+      ]
+    }, 
+    {
+      "Civilingenjörsyrken inom maskinteknik": [
+        "Forskningsingenjör, maskin", 
+        "Civilingenjör, produktion, maskin", 
+        "Civilingenjör, maskin", 
+        "Flygingenjör", 
+        "Civilingenjör, tillverkningsindustri", 
+        "Utvecklingsingenjör, maskin", 
+        "Civilingenjör, energi", 
+        "Civilingenjör, farkostteknik", 
+        "Processingenjör, maskin", 
+        "Provningsingenjör, maskin", 
+        "Utvecklingsingenjör, tillverkningsindustri", 
+        "Civilingenjör, VVS", 
+        "Civilingenjör, konstruktion, maskin", 
+        "Driftingenjör, maskin", 
+        "Projekteringsingenjör, maskin"
+      ]
+    }, 
+    {
+      "Ingenjörer och tekniker inom gruvteknik och metallurgi": [
+        "Underhållschef", 
+        "Underhållsplanerare", 
+        "Kvalitetsingenjör, metallurgi/Kvalitetstekniker, metallurgi"
+      ]
+    }, 
+    {
+      "Ingenjörer och tekniker inom kemi och kemiteknik": [
+        "Serviceingenjör, kemiteknik", 
+        "Produktionsingenjör, kemi", 
+        "Kvalitetsingenjör, kemiteknik/Kvalitetstekniker, kemiteknik", 
+        "Valideringsingenjör", 
+        "Kemiingenjör", 
+        "Processingenjör, kemiteknik"
+      ]
+    }, 
+    {
+      "Ingenjörer och tekniker inom elektroteknik": [
+        "Provningsingenjör, elkraft", 
+        "Nätplanerare", 
+        "Serviceingenjör, elektronik", 
+        "Elingenjör", 
+        "Elkrafttekniker/Distributionstekniker", 
+        "Installationsingenjör, el", 
+        "Planeringsingenjör, elkraft", 
+        "Kvalitetsingenjör, elektronik/Kvalitetstekniker, elektronik", 
+        "Automationstekniker, el", 
+        "Teleingenjör", 
+        "Elkonstruktör", 
+        "Dataingenjör", 
+        "Serviceingenjör, elkraft", 
+        "Eltekniker", 
+        "Driftingenjör, elkraft", 
+        "Elkraftingenjör", 
+        "Elektrotekniker", 
+        "Kontrollanläggningstekniker", 
+        "Automationstekniker, elektronik", 
+        "Produktionsingenjör, elektronik", 
+        "Elektronikkonstruktör", 
+        "Signalingenjör"
+      ]
+    }
+  ], 
+  "Transport, distribution, lager": [
+    {
+      "Lastbilsförare m.fl.": [
+        "Specialtransportförare", 
+        "Tank- och bulkbilsförare", 
+        "Fjärrbilsförare", 
+        "Liftdumper- och lastväxlarförare", 
+        "Bygg- och anläggningsförare", 
+        "Bohags- och flyttbilsförare", 
+        "Sug- och spolbilsförare", 
+        "Renhållningsförare", 
+        "Kranbilsförare", 
+        "Distributionsförare"
+      ]
+    }, 
+    {
+      "Hamnarbetare": [
+        "Hamnarbetare/Stuveriarbetare"
+      ]
+    }, 
+    {
+      "Truckförare": [
+        "Truckförare"
+      ]
+    }, 
+    {
+      "Transportledare och transportsamordnare": [
+        "Trafikledare, vägtrafik", 
+        "Expeditör, spedition", 
+        "Transportsamordnare", 
+        "Transportplanerare", 
+        "Transportledare", 
+        "Trafikkoordinator", 
+        "Trafikplanerare, transportföretag", 
+        "Trafiksamordnare", 
+        "Speditionsassistent"
+      ]
+    }, 
+    {
+      "Övriga bil-, motorcykel- och cykelförare": [
+        "Budbilsförare", 
+        "Testförare", 
+        "Paketbilsförare"
+      ]
+    }, 
+    {
+      "Lager- och terminalpersonal": [
+        "Lagerplanerare", 
+        "Terminalarbetare", 
+        "Lagerarbetare", 
+        "Godsmottagare", 
+        "Leveransbevakare", 
+        "Depåman/Depåtekniker", 
+        "Lagerkontorist"
+      ]
+    }, 
+    {
+      "Arbetsledare inom lager och terminal": [
+        "Arbetsledare, lager", 
+        "Reservdelschef"
+      ]
+    }, 
+    {
+      "Ramppersonal, flyttkarlar och varupåfyllare m.fl.": [
+        "Expressarbetare/Flyttkarl/Stadsbud", 
+        "Flygplatstekniker"
+      ]
+    }, 
+    {
+      "Lokförare": [
+        "Lokförare/Förare av tåg"
+      ]
+    }, 
+    {
+      "Taxiförare m.fl.": [
+        "Taxiförare/Taxichaufför", 
+        "Personbilsförare, persontransporter"
+      ]
+    }, 
+    {
+      "Brevbärare och postterminalarbetare": [
+        "Brevbärare"
+      ]
+    }, 
+    {
+      "Piloter m.fl.": []
+    }, 
+    {
+      "Maskinbefäl": []
+    }, 
+    {
+      "Flygledare": []
+    }, 
+    {
+      "Bangårdspersonal": []
+    }, 
+    {
+      "Kabinpersonal m.fl.": []
+    }, 
+    {
+      "Fartygsbefäl m.fl.": []
+    }, 
+    {
+      "Matroser och jungmän m.fl.": []
+    }, 
+    {
+      "Tågvärdar och ombordansvariga m.fl.": [
+        "Tågvärd/Tågvärdinna"
+      ]
+    }, 
+    {
+      "Reklamutdelare och tidningsdistributörer": [
+        "Tidningsbud/Tidningsdistributör"
+      ]
+    }, 
+    {
+      "Buss- och spårvagnsförare": [
+        "Bussförare/Busschaufför"
+      ]
+    }
+  ], 
+  "Chefer och verksamhetsledare": [
+    {
+      "Politiker": []
+    }, 
+    {
+      "Hotell- och konferenschefer": [
+        "Hotellchef"
+      ]
+    }, 
+    {
+      "Övriga chefer inom övrig servicenäring": []
+    }, 
+    {
+      "Chefer inom grund- och gymnasieskola samt vuxenutbildning": [
+        "Utbildningschef", 
+        "Biträdande rektor", 
+        "Rektor", 
+        "Skolchef/Skoldirektör/Skolledare"
+      ]
+    }, 
+    {
+      "Förvaltare inom skogsbruk och lantbruk m.fl.": []
+    }, 
+    {
+      "Personal- och HR-chefer": [
+        "HR-chef"
+      ]
+    }, 
+    {
+      "Fastighets- och förvaltningschefer": [
+        "Förvaltningschef, kommun", 
+        "Fastighetschef/Fastighetsdirektör"
+      ]
+    }, 
+    {
+      "IT-chefer": [
+        "Chief Information Officer/CIO/IT-chef", 
+        "Driftchef, data"
+      ]
+    }, 
+    {
+      "General-, landstings- och kommundirektörer m.fl.": [
+        "Kommunchef/Kommundirektör/Stadsdirektör"
+      ]
+    }, 
+    {
+      "Chefer inom äldreomsorg": [
+        "Föreståndare, äldreboende", 
+        "Enhetschef, hemtjänst", 
+        "Äldreomsorgschef", 
+        "Områdeschef, äldre- och handikappomsorg"
+      ]
+    }, 
+    {
+      "Inköps-, logistik- och transportchefer": [
+        "Lagerchef", 
+        "Inköpschef", 
+        "Trafikchef", 
+        "Logistikchef", 
+        "Leveranschef", 
+        "Transportchef"
+      ]
+    }, 
+    {
+      "Förvaltnings- och planeringschefer": [
+        "Kanslichef", 
+        "Avdelningschef, statlig", 
+        "Socialchef/Socialdirektör", 
+        "Planeringschef", 
+        "Affärsområdeschef", 
+        "Avdelningschef, kommun", 
+        "Enhetschef, offentlig förvaltning", 
+        "Avdelningschef, region"
+      ]
+    }, 
+    {
+      "Verkställande direktörer m.fl.": [
+        "Verkställande direktör/VD"
+      ]
+    }, 
+    {
+      "Produktionschefer inom tillverkning": [
+        "Verkstadschef", 
+        "Driftchef, energi", 
+        "Gruppchef, teknik", 
+        "Produktionschef, tillverkning", 
+        "Driftchef, VA"
+      ]
+    }, 
+    {
+      "Ekonomi- och finanschefer": [
+        "Ekonomidirektör/Finanschef", 
+        "Redovisningschef", 
+        "Ekonomichef"
+      ]
+    }, 
+    {
+      "Chefer inom arkitekt- och ingenjörsverksamhet": [
+        "Teknisk chef, kommun", 
+        "Stadsbyggnadschef/Stadsbyggnadsdirektör"
+      ]
+    }, 
+    {
+      "Chefer inom socialt och kurativt arbete": [
+        "Boendeföreståndare", 
+        "Enhetschef inom social omsorg/Föreståndare inom social omsorg", 
+        "Boendechef, kommun", 
+        "Enhetschef inom socialtjänst"
+      ]
+    }, 
+    {
+      "Övriga chefer inom utbildning": [
+        "Kontorschef, utbildningsföretag"
+      ]
+    }, 
+    {
+      "Chefer inom bank, finans och försäkring": []
+    }, 
+    {
+      "Chefer inom handel": [
+        "Butikschef", 
+        "Regionchef, butik"
+      ]
+    }, 
+    {
+      "Chefer inom friskvård, sport och fritid": [
+        "Fritidschef", 
+        "Idrottsplatschef"
+      ]
+    }, 
+    {
+      "Forsknings- och utvecklingschefer": [
+        "Forskningschef", 
+        "Laboratoriechef", 
+        "Utvecklingschef"
+      ]
+    }, 
+    {
+      "Chefer inom hälso- och sjukvård": [
+        "Sektionschef, sjukhus", 
+        "Verksamhetschef, hälso- och sjukvård", 
+        "Chefssjuksköterska", 
+        "Enhetschef, hälso- och sjukvård", 
+        "Klinikchef, tandvård/Verksamhetschef, tandvård"
+      ]
+    }, 
+    {
+      "Informations-, kommunikations- och PR-chefer": [
+        "Informationschef/Kommunikationschef"
+      ]
+    }, 
+    {
+      "Chefer och ledare inom trossamfund": []
+    }, 
+    {
+      "Försäljnings- och marknadschefer": [
+        "Marknadschef", 
+        "Teamledare", 
+        "Försäljningschef"
+      ]
+    }, 
+    {
+      "Övriga chefer inom samhällsservice": [
+        "Kulturchef", 
+        "Bibliotekschef", 
+        "Sektionschef, offentlig förvaltning", 
+        "Kontorschef, offentlig förvaltning", 
+        "Kriminalvårdsinspektör"
+      ]
+    }, 
+    {
+      "Chefstjänstemän i intresseorganisationer": [
+        "Organisationschef"
+      ]
+    }, 
+    {
+      "Driftchefer inom bygg, anläggning och gruva": [
+        "Produktionschef, anläggning", 
+        "Produktionschef, bygg", 
+        "Platschef, bygg", 
+        "Platschef, anläggning"
+      ]
+    }, 
+    {
+      "Restaurang- och kökschefer": [
+        "Restaurangchef", 
+        "Kökschef"
+      ]
+    }, 
+    {
+      "Övriga administrations- och servicechefer": [
+        "Administrativ chef", 
+        "Miljöchef", 
+        "Kvalitetschef", 
+        "Säkerhetschef", 
+        "Kundtjänstchef", 
+        "Städchef"
+      ]
+    }, 
+    {
+      "Chefer inom förskoleverksamhet": [
+        "Förskolerektor", 
+        "Biträdande förskolerektor"
+      ]
+    }
+  ], 
+  "Militära yrken": [
+    {
+      "Soldater m.fl.": [
+        "Soldat/Sjöman"
+      ]
+    }, 
+    {
+      "Officerare": [
+        "Officer"
+      ]
+    }, 
+    {
+      "Specialistofficerare": [
+        "Specialistofficer"
+      ]
+    }
+  ]
+}
