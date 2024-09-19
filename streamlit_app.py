@@ -279,9 +279,9 @@ def räkna_cosine(A, B):
 def cosine_mellan_bakgrund_och_alla_yrken(skills_utb, intresse, data):
     alla_liknande_yb = []
     if intresse == "inte" or intresse == None:
-        antal_att_spara = 0
+        antal_att_spara = 4
     elif intresse == "intresserad":
-        antal_att_spara = 2
+        antal_att_spara = 4
     elif intresse == "mycket":
         antal_att_spara = 4
     for k, v in data["yrkesid_topplista_skills"].items():
@@ -591,7 +591,7 @@ def välja_utbildningsbakgrund(data, valt_län):
                     venn = skapa_venn(venn_data)
                     st.pyplot(venn)
             except:
-                st.write("Kan inte hitta någon data om valt yrke")
+                st.write("Finns inte tillräckligt med data")
 
 all_data = läsa_in_json_fil("masterdata.json")
 
