@@ -602,7 +602,7 @@ alla_länsid = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagled
 giltiga_län = list(all_data["länskod_länsnamn"].values())
 giltiga_län = sorted(giltiga_län)
 
-st.title("Hej")
+st.title("Hallå")
 
 st.write("Denna demo försöker utforska vad som går att säga utifrån annonsdata, utbildningsbeskrivningar, prognoser och arbetsmarknadstaxonomi. De fyra frågorna den försöker svar på är:\n1) VILKA liknande yrken finns det utifrån din yrkes- och utbildningsbakgrund?\n2) VARFÖR skulle ett liknande yrke passa just dig?\n3) HUR hittar du till annonser för dessa liknande yrken?\n4) VAD är bra för dig att lyfta fram i en ansökan till ett liknande yrke?")
 
