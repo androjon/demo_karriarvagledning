@@ -593,7 +593,8 @@ def välja_utbildningsbakgrund(data, valt_län):
             except:
                 st.write("Finns inte tillräckligt med data")
 
-all_data = läsa_in_json_fil("masterdata.json")
+all_data = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/masterdata.json")
+länsid = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/område_ssyk_yb_struktur.json")
 
 giltiga_län = list(all_data["länskod_länsnamn"].values())
 giltiga_län = sorted(giltiga_län)
