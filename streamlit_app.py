@@ -443,7 +443,7 @@ def välja_yrkesbakgrund(data, valt_län, länsid):
     
     elif yrkesval_områdesval == "välja yrkesområde":
 
-        områdes_ssyk_yb_dict = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/område_ssyk_yb_struktur.json")
+        områdes_ssyk_yb_dict = läsa_in_json_fil("område_ssyk_yb_struktur.json")
 
         områden = list(områdes_ssyk_yb_dict.keys())
 
@@ -596,8 +596,8 @@ def välja_utbildningsbakgrund(data, valt_län, länsid):
             except:
                 st.write("Finns inte tillräckligt med data")
 
-all_data = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/masterdata.json")
-alla_länsid = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/område_ssyk_yb_struktur.json")
+all_data = läsa_in_json_fil("main/masterdata.json")
+alla_länsid = läsa_in_json_fil("område_ssyk_yb_struktur.json")
 
 giltiga_län = list(all_data["länskod_länsnamn"].values())
 giltiga_län = sorted(giltiga_län)
