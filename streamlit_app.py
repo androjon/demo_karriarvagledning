@@ -596,7 +596,7 @@ def välja_utbildningsbakgrund(data, valt_län, länsid):
             except:
                 st.write("Finns inte tillräckligt med data")
 
-all_data = läsa_in_json_fil("main/masterdata.json")
+all_data = läsa_in_json_fil("masterdata.json")
 alla_länsid = läsa_in_json_fil("område_ssyk_yb_struktur.json")
 
 giltiga_län = list(all_data["länskod_länsnamn"].values())
