@@ -529,8 +529,7 @@ def välja_utbildningsbakgrund(data, valt_län):
                 venn = skapa_venn(venn_data)
                 st.pyplot(venn)
 
-all_data = läsa_in_json_fil("/Users/jonfindahl/Desktop/Python/Matchning/data/masterdata.json")
-
+all_data = läsa_in_json_fil("masterdata.json")
 giltiga_län = list(all_data["länskod_länsnamn"].values())
 giltiga_län = sorted(giltiga_län)
 
