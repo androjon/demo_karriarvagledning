@@ -618,10 +618,10 @@ yrke_utb_val = st.radio(
 
 if valt_län and yrke_utb_val == "yrkesbakgrund":
     länsid = alla_länsid.get(valt_län)
-    st.write(länsid)
+    st.write(valt_län)
     välja_yrkesbakgrund(all_data, valt_län, länsid)
 
 elif valt_län and yrke_utb_val == "utbildningsbakgrund":
     länsid = alla_länsid.get(valt_län)
-    st.write(länsid)
+    st.write(valt_län)
     välja_utbildningsbakgrund(all_data, valt_län, länsid)
