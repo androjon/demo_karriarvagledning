@@ -1,11 +1,4 @@
 streamlit
 matplotlib
 wordcloud
-json
-collections
 matplotlib_venn
-re
-itertools
-operator
-math
-numpy
