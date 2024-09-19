@@ -511,84 +511,87 @@ def välja_utbildningsbakgrund(data, valt_län):
                     ["inte", "intresserad", "mycket"],
                     horizontal = True, index = None,
                 )
+            try:
 
-            antal_att_visa_upp = 20
-            info_vald_utb = data["susaid_topplista_skills"].get(id_inriktning)
-            skills_vald_utb = info_vald_utb["skills"]
-            skills = list(skills_vald_utb.keys())
-            intresseord_utb = skills[0:antal_att_visa_upp]
+                antal_att_visa_upp = 20
+                info_vald_utb = data["susaid_topplista_skills"].get(id_inriktning)
+                skills_vald_utb = info_vald_utb["skills"]
+                skills = list(skills_vald_utb.keys())
+                intresseord_utb = skills[0:antal_att_visa_upp]
 
-            valda_intresseord_utb = st.multiselect(
-            f"Välj ett eller flera ord som beskriver vad du är intresserad av",
-            (intresseord_utb),)
+                valda_intresseord_utb = st.multiselect(
+                f"Välj ett eller flera ord som beskriver vad du är intresserad av",
+                (intresseord_utb),)
 
-            valda_erfarenhetsord_utb = []
+                valda_erfarenhetsord_utb = []
 
-            liknande_yb, liknande_yb_skills = cosine_mellan_bakgrund_och_alla_yrken(skills_vald_utb, intresse_utb, data)
+                liknande_yb, liknande_yb_skills = cosine_mellan_bakgrund_och_alla_yrken(skills_vald_utb, intresse_utb, data)
 
-            liknande_yb_med_prognos = addera_prognos_antal_annonser(liknande_yb, data, valt_län)
+                liknande_yb_med_prognos = addera_prognos_antal_annonser(liknande_yb, data, valt_län)
 
-            st.write("Nedan finns länkar till annonser för några liknande yrken utifrån tillhörande yrkesgrupp och valda erfarenhets- och intresseord")
-
-            col1, col2 = st.columns(2)
-
-            antal = 0
-            for i in liknande_yb:
-                try: 
-                    id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == i, data["yrkesid_namn"]))[0]
-                    skills_liknande = liknande_yb_skills.get(i)
-                    länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord_utb, valda_intresseord_utb, data)
-                    if (antal % 2) == 0:
-                        col1.link_button(i, länk)
-                    else:
-                        col2.link_button(i, länk)
-                    antal += 1
-                except:
-                    pass
-
-            vald_liknande = st.selectbox(
-                "Välj ett liknande yrke som du skulle vilja veta mer om",
-                (liknande_yb_med_prognos),index = None)
-            
-            if vald_liknande:
-                vald_liknande_split = vald_liknande.split("(")
-                vald_liknande = vald_liknande_split[0]
-                skills_liknande = liknande_yb_skills.get(vald_liknande)
-                valda_ord = valda_erfarenhetsord_utb + valda_intresseord_utb
-                jämförelselista = skapa_jämförelselista(vald_utbildningsinriktning, skills_vald_utb, vald_liknande, skills_liknande, valda_ord)
-
-                id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == vald_liknande, data["yrkesid_namn"]))[0]
-
-                try:
-                    af_kompetenser = data["yrkesid_topplista_taxonomibegrepp"].get(id_liknande_yrke)
-                    if not af_kompetenser:
-                        af_kompetenser = ["Kunde inte hitta någon data"]
-                except:
-                    af_kompetenser = ["Kunde inte hitta någon data"]
-                taxonomi = ("  \n ").join(af_kompetenser)
+                st.write("Nedan finns länkar till annonser för några liknande yrken utifrån tillhörande yrkesgrupp och valda erfarenhets- och intresseord")
 
                 col1, col2 = st.columns(2)
 
-                with col1:
-                    st.write(f"Till höger ser du kompetenser som många arbetsgivare efterfrågar när de söker efter en {vald_liknande}")
+                antal = 0
+                for i in liknande_yb:
+                    try: 
+                        id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == i, data["yrkesid_namn"]))[0]
+                        skills_liknande = liknande_yb_skills.get(i)
+                        länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord_utb, valda_intresseord_utb, data)
+                        if (antal % 2) == 0:
+                            col1.link_button(i, länk)
+                        else:
+                            col2.link_button(i, länk)
+                        antal += 1
+                    except:
+                        pass
 
-                with col2:
-                    st.write(taxonomi)
+                vald_liknande = st.selectbox(
+                    "Välj ett liknande yrke som du skulle vilja veta mer om",
+                    (liknande_yb_med_prognos),index = None)
+            
+                if vald_liknande:
+                    vald_liknande_split = vald_liknande.split("(")
+                    vald_liknande = vald_liknande_split[0]
+                    skills_liknande = liknande_yb_skills.get(vald_liknande)
+                    valda_ord = valda_erfarenhetsord_utb + valda_intresseord_utb
+                    jämförelselista = skapa_jämförelselista(vald_utbildningsinriktning, skills_vald_utb, vald_liknande, skills_liknande, valda_ord)
 
-                st.divider()
+                    id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == vald_liknande, data["yrkesid_namn"]))[0]
 
-                st.write(f"Nedanför ser du ord som många arbetsgivare använder i annonser för {vald_liknande}")
+                    try:
+                        af_kompetenser = data["yrkesid_topplista_taxonomibegrepp"].get(id_liknande_yrke)
+                        if not af_kompetenser:
+                            af_kompetenser = ["Kunde inte hitta någon data"]
+                    except:
+                        af_kompetenser = ["Kunde inte hitta någon data"]
+                    taxonomi = ("  \n ").join(af_kompetenser)
 
-                ordmoln = skapa_ordmoln(skills_liknande, skills_vald_utb, valda_erfarenhetsord_utb, valda_intresseord_utb)
-                st.pyplot(ordmoln)
+                    col1, col2 = st.columns(2)
 
-                st.divider()
+                    with col1:
+                        st.write(f"Till höger ser du kompetenser som många arbetsgivare efterfrågar när de söker efter en {vald_liknande}")
 
-                st.write(f"Nedanför ser du likheter och skillnader mellan hur olika arbetsgivare och utbildningsanordnare uttrycker sig när det kommer till kunskaper, erfarenheter och arbetsuppgifter för {vald_utbildningsinriktning} och {vald_liknande}")
+                    with col2:
+                        st.write(taxonomi)
 
-                venn_data = jämföra_bakgrund_med_liknande(jämförelselista, valda_ord)
-                venn = skapa_venn(venn_data)
-                st.pyplot(venn)
+                    st.divider()
+
+                    st.write(f"Nedanför ser du ord som många arbetsgivare använder i annonser för {vald_liknande}")
+
+                    ordmoln = skapa_ordmoln(skills_liknande, skills_vald_utb, valda_erfarenhetsord_utb, valda_intresseord_utb)
+                    st.pyplot(ordmoln)
+
+                    st.divider()
+
+                    st.write(f"Nedanför ser du likheter och skillnader mellan hur olika arbetsgivare och utbildningsanordnare uttrycker sig när det kommer till kunskaper, erfarenheter och arbetsuppgifter för {vald_utbildningsinriktning} och {vald_liknande}")
+
+                    venn_data = jämföra_bakgrund_med_liknande(jämförelselista, valda_ord)
+                    venn = skapa_venn(venn_data)
+                    st.pyplot(venn)
+            except:
+                st.write("Kan inte hitta någon data om valt yrke")
 
 all_data = läsa_in_json_fil("masterdata.json")
 
