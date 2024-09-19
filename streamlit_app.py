@@ -616,6 +616,8 @@ yrke_utb_val = st.radio(
             horizontal = True, index = 0,
         )
 
+st.write(alla_länsid)
+
 if valt_län and yrke_utb_val == "yrkesbakgrund":
     länsid = alla_länsid.get(valt_län)
     st.write(valt_län)
