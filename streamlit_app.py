@@ -255,7 +255,9 @@ def skapa_länk(ssyk, skills, länsid):
         s = rensa_text_till_länk(s)
         splittade_skills.append(s)
     splittade_skills = "%20".join(splittade_skills)
+    st.write(länsid)
     län = "&l=2:" + länsid
+    st.write(län)
     return grund + splittade_skills + län
 
 def skapa_länk_till_platsbanken(liknande_id, liknande_skill, erfarenhetsord, intresseord, data, länsid):
