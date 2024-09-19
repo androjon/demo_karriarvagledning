@@ -248,22 +248,23 @@ def rensa_text_till_länk(text):
         text = re.sub(key, value, text)
     return text
 
-def skapa_länk(ssyk, skills):
+def skapa_länk(ssyk, skills, länsid):
     grund = f"https://arbetsformedlingen.se/platsbanken/annonser?p=5:{ssyk}&q="
     splittade_skills = []
     for s in skills:
         s = rensa_text_till_länk(s)
         splittade_skills.append(s)
     splittade_skills = "%20".join(splittade_skills)
-    return grund + splittade_skills
+    län = "&l=2:" + länsid
+    return grund + splittade_skills + län
 
-def skapa_länk_till_platsbanken(liknande_id, liknande_skill, erfarenhetsord, intresseord, data):
+def skapa_länk_till_platsbanken(liknande_id, liknande_skill, erfarenhetsord, intresseord, data, länsid):
     antal_skills_att_söka = 15
     ssyk = data["yrkesid_ssykid"].get(liknande_id)
     skills_som_lista = list(liknande_skill.keys())
     alla_skills = erfarenhetsord + intresseord + skills_som_lista
     alla_skills = alla_skills[0:antal_skills_att_söka]
-    länk = skapa_länk(ssyk, alla_skills)
+    länk = skapa_länk(ssyk, alla_skills, länsid)
     return länk
 
 def norma(data):
@@ -303,7 +304,7 @@ def cosine_mellan_bakgrund_och_alla_yrken(skills_utb, intresse, data):
         liknande_med_skills[i["namn"]] = i["skills"]
     return namn_liknande_yb, liknande_med_skills
 
-def välja_yrke(valt_yrke, data):
+def välja_yrke(valt_yrke, data, länsid):
     id_valt_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == valt_yrke, data["yrkesid_namn"]))[0]
     område = data["yrkesid_område"].get(id_valt_yrke)
 
@@ -366,7 +367,7 @@ def välja_yrke(valt_yrke, data):
         try: 
             id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == i, data["yrkesid_namn"]))[0]
             skills_liknande = liknande_yb_skills.get(i)
-            länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord, valda_intresseord, data)
+            länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord, valda_intresseord, data, länsid)
             if (antal % 2) == 0:
                 col1.link_button(i, länk)
             else:
@@ -419,7 +420,7 @@ def välja_yrke(valt_yrke, data):
         venn = skapa_venn(venn_data)
         st.pyplot(venn)
 
-def välja_yrkesbakgrund(data, valt_län):
+def välja_yrkesbakgrund(data, valt_län, länsid):
     giltiga_yb = data["giltiga_yrksnamn"]
     giltiga_yb = sorted(giltiga_yb)
 
@@ -436,11 +437,11 @@ def välja_yrkesbakgrund(data, valt_län):
             (giltiga_yb), index = None)
         
         if valt_yrke:
-            välja_yrke(valt_yrke, data)
+            välja_yrke(valt_yrke, data, länsid)
     
     elif yrkesval_områdesval == "välja yrkesområde":
 
-        områdes_ssyk_yb_dict = läsa_in_json_fil("område_ssyk_yb_struktur.json")
+        områdes_ssyk_yb_dict = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/område_ssyk_yb_struktur.json")
 
         områden = list(områdes_ssyk_yb_dict.keys())
 
@@ -469,9 +470,9 @@ def välja_yrkesbakgrund(data, valt_län):
                     "Välj ett yrke som du tidigare har arbetat som",
                     (valbara_yb), index = None)
                 if valt_yrke:
-                    välja_yrke(valt_yrke, data)
+                    välja_yrke(valt_yrke, data, länsid)
         
-def välja_utbildningsbakgrund(data, valt_län):
+def välja_utbildningsbakgrund(data, valt_län, länsid):
     utbildningsområden = []
     for i in data["susaområden_inriktningar"]:
         utbildningsområden.append(i["områdesnamn"])
@@ -538,7 +539,7 @@ def välja_utbildningsbakgrund(data, valt_län):
                     try: 
                         id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == i, data["yrkesid_namn"]))[0]
                         skills_liknande = liknande_yb_skills.get(i)
-                        länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord_utb, valda_intresseord_utb, data)
+                        länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord_utb, valda_intresseord_utb, data, länsid)
                         if (antal % 2) == 0:
                             col1.link_button(i, länk)
                         else:
@@ -594,7 +595,7 @@ def välja_utbildningsbakgrund(data, valt_län):
                 st.write("Finns inte tillräckligt med data")
 
 all_data = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/masterdata.json")
-länsid = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/område_ssyk_yb_struktur.json")
+alla_länsid = läsa_in_json_fil("https://github.com/androjon/demo_karriarvagledning/blob/main/område_ssyk_yb_struktur.json")
 
 giltiga_län = list(all_data["länskod_länsnamn"].values())
 giltiga_län = sorted(giltiga_län)
@@ -614,7 +615,9 @@ yrke_utb_val = st.radio(
         )
 
 if valt_län and yrke_utb_val == "yrkesbakgrund":
-    välja_yrkesbakgrund(all_data, valt_län)
+    länsid = alla_länsid.get(valt_län)
+    välja_yrkesbakgrund(all_data, valt_län, länsid)
 
 elif valt_län and yrke_utb_val == "utbildningsbakgrund":
-    välja_utbildningsbakgrund(all_data, valt_län)
+    länsid = alla_länsid.get(valt_län)
+    välja_utbildningsbakgrund(all_data, valt_län, länsid)
