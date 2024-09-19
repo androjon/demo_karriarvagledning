@@ -602,7 +602,7 @@ alla_länsid = läsa_in_json_fil("område_ssyk_yb_struktur.json")
 giltiga_län = list(all_data["länskod_länsnamn"].values())
 giltiga_län = sorted(giltiga_län)
 
-st.title("Hallå")
+st.title("Demo")
 
 st.write("Denna demo försöker utforska vad som går att säga utifrån annonsdata, utbildningsbeskrivningar, prognoser och arbetsmarknadstaxonomi. De fyra frågorna den försöker svar på är:\n1) VILKA liknande yrken finns det utifrån din yrkes- och utbildningsbakgrund?\n2) VARFÖR skulle ett liknande yrke passa just dig?\n3) HUR hittar du till annonser för dessa liknande yrken?\n4) VAD är bra för dig att lyfta fram i en ansökan till ett liknande yrke?")
 
@@ -616,14 +616,10 @@ yrke_utb_val = st.radio(
             horizontal = True, index = 0,
         )
 
-st.write(alla_länsid)
-
 if valt_län and yrke_utb_val == "yrkesbakgrund":
     länsid = alla_länsid.get(valt_län)
-    st.write(valt_län)
     välja_yrkesbakgrund(all_data, valt_län, länsid)
 
 elif valt_län and yrke_utb_val == "utbildningsbakgrund":
     länsid = alla_länsid.get(valt_län)
-    st.write(valt_län)
     välja_utbildningsbakgrund(all_data, valt_län, länsid)
