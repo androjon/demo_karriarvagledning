@@ -55,7 +55,6 @@ def skapa_venn(indata):
         venn.get_label_by_id("01").set_text("\n".join(skills[1] - skills[0]))
     except:
         pass
-    plt.title(f"Likheter och skillnader mellan hur olika arbetsgivare och utbildningsanordnare uttrycker sig \nnär det kommer till kunskaper, erfarenheter och arbetsuppgifter")
     return plt
 
 def räkna_förekomster(data):
@@ -199,7 +198,7 @@ def skapa_jämförelselista(namn_utgång, skills_utgång, namn_liknande, skills_
             plats_att_flytta_från = skills_utgång.index(s)
             ord_att_flytta = skills_utgång.pop(plats_att_flytta_från)
             skills_utgång.insert(0, ord_att_flytta)
-    bakgrund = {"namn": f"Du har en bakgrund som/inom:\n{namn_utgång}",
+    bakgrund = {"namn": namn_utgång,
                 "skills": skills_utgång}
     utdata.append(bakgrund)
     liknande_skills = list(skills_liknande.keys())
@@ -208,7 +207,7 @@ def skapa_jämförelselista(namn_utgång, skills_utgång, namn_liknande, skills_
             plats_att_flytta_från = liknande_skills.index(k)
             ord_att_flytta = liknande_skills.pop(plats_att_flytta_från)
             liknande_skills.insert(0, ord_att_flytta)
-    liknande = {"namn": f"Du är intresserad av:\n{namn_liknande}",
+    liknande = {"namn": namn_liknande,
                 "skills": liknande_skills}
     utdata.append(liknande)
     return utdata
@@ -224,7 +223,7 @@ def ändra_färger_på_ord(erfarenheter, intressen):
             return (int(r * 255), int(g * 255), int(b * 255))
     return test_color_func
 
-def skapa_ordmoln(id_molnyrke, skills_molnyrke, skills_bakgrund, erfarenhetsord, intresseord, data):
+def skapa_ordmoln(skills_molnyrke, skills_bakgrund, erfarenhetsord, intresseord):
     wordcloud = WordCloud(width=800, height=800,
                           background_color= 'white',
                           prefer_horizontal=1).generate_from_frequencies(skills_molnyrke)
@@ -232,28 +231,10 @@ def skapa_ordmoln(id_molnyrke, skills_molnyrke, skills_bakgrund, erfarenhetsord,
     beräknad_erfarenhet = list(skills_bakgrund.keys())
     erfarenhet = vald_erfarenhet + beräknad_erfarenhet
     wordcloud.recolor(color_func = ändra_färger_på_ord(erfarenhet, intresseord))
-    plt.figure(figsize=(14, 5), facecolor=None)
+    plt.figure(figsize = (6, 6), facecolor=None)
     plt.imshow(wordcloud)
     plt.axis('off')
     plt.tight_layout(pad=0)
-    typsnitt = {"family":"monospace"}
-    yrkesnamn = data["yrkesid_namn"].get(id_molnyrke)
-    text1 = f"Till höger ser du ord som\nmånga arbetsgivare\nanvänder i annonser för\n{yrkesnamn}"
-    plt.text(-600, 400, text1, fontsize = 10, fontdict = (typsnitt))
-    try:
-        af_kompetenser = data["yrkesid_topplista_taxonomibegrepp"].get(id_molnyrke)
-        if not af_kompetenser:
-            af_kompetenser = ["Kunde inte hitta\nnågon data"]
-    except:
-        af_kompetenser = ["Kunde inte hitta\nnågon data"]
-    lista = []
-    antal = 0
-    for i in af_kompetenser:
-        antal += 1
-        lista.append(i)
-    lista = "\n".join(lista)
-    text2 = f"Arbetsförmedlingen\nbedömer att\nföljande kompetenser\när efterfrågade på\narbetsmarknaden inom\ndetta område\n\n{lista}"
-    plt.text(900, 600, text2, fontsize = 10, fontdict = (typsnitt))
     return plt
 
 def rensa_text_till_länk(text):
@@ -277,24 +258,12 @@ def skapa_länk(ssyk, skills):
     return grund + splittade_skills
 
 def skapa_länk_till_platsbanken(liknande_id, liknande_skill, erfarenhetsord, intresseord, data):
-    antal_skills_att_söka = 5
+    antal_skills_att_söka = 15
     ssyk = data["yrkesid_ssykid"].get(liknande_id)
     skills_som_lista = list(liknande_skill.keys())
-    vikt_intresse = 1.2
-    vikt_erfarenhet = 1.1
-    for s in skills_som_lista:
-        if s in intresseord:
-            plats_att_flytta_från = skills_som_lista.index(s)
-            ord_att_flytta = skills_som_lista.pop(plats_att_flytta_från)
-            #skills_som_lista.insert(0, f"{ord_att_flytta}^{str(vikt_intresse)}")
-            skills_som_lista.insert(0, ord_att_flytta)
-        elif s in erfarenhetsord:
-            plats_att_flytta_från = skills_som_lista.index(s)
-            ord_att_flytta = skills_som_lista.pop(plats_att_flytta_från)
-            #skills_som_lista.insert(0, f"{ord_att_flytta}^{str(vikt_erfarenhet)}")
-            skills_som_lista.insert(0, ord_att_flytta)
-    skills_som_lista = skills_som_lista[0:antal_skills_att_söka]
-    länk = skapa_länk(ssyk, skills_som_lista)
+    alla_skills = erfarenhetsord + intresseord + skills_som_lista
+    alla_skills = alla_skills[0:antal_skills_att_söka]
+    länk = skapa_länk(ssyk, alla_skills)
     return länk
 
 def norma(data):
@@ -334,105 +303,173 @@ def cosine_mellan_bakgrund_och_alla_yrken(skills_utb, intresse, data):
         liknande_med_skills[i["namn"]] = i["skills"]
     return namn_liknande_yb, liknande_med_skills
 
-def välja_yrkesbakgrund(data, valt_län):
-    giltiga_yb = data["giltiga_yrksnamn"]
-    giltiga_yb = sorted(giltiga_yb)
+def välja_yrke(valt_yrke, data):
+    id_valt_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == valt_yrke, data["yrkesid_namn"]))[0]
+    område = data["yrkesid_område"].get(id_valt_yrke)
 
-    valt_yrke = st.selectbox(
-        "Välj ett yrke som du tidigare har arbetat som",
-        (giltiga_yb), index = None)
+    col1, col2 = st.columns(2)
 
-    if valt_yrke:
-        id_valt_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == valt_yrke, data["yrkesid_namn"]))[0]
-        område = data["yrkesid_område"].get(id_valt_yrke)
+    with col1:
+        erfarenhet = st.radio(
+            f"Hur mycket erfarenhet har du som {valt_yrke}?",
+            ["oerfaren", "erfaren", "mycket erfaren"],
+            horizontal = True, index = None,
+        )
+
+        rörlighet = st.radio(
+            f"Kan du tänka dig att söka jobb i närheten av {valt_län}?",
+            ["ja", "nej"],
+            horizontal = True, index = None,
+        )
+
+    with col2:
+        intresse = st.radio(
+            f"Hur intresserad är du av yrken inom yrkesområdet {område}?",
+            ["inte", "intresserad", "mycket"],
+            horizontal = True, index = None,
+        )
+
+        utbildningsintresse = st.radio(
+            f"Skulle du vara intresserad av en längre utbildning för att hitta ett nytt yrke?",
+            ["ja", "nej"],
+            horizontal = True, index = None,
+        )
+
+    antal_att_visa_upp = 20
+
+    info_valt_yrke = data["yrkesid_topplista_skills"].get(id_valt_yrke)
+    skills_valt_yrke = info_valt_yrke["skills"]
+    skills = list(skills_valt_yrke.keys())
+    erfarenhetsord = skills[0:antal_att_visa_upp]
+
+    valda_erfarenhetsord = st.multiselect(
+        f"Här är en lista på några ord från annonser för {valt_yrke}. Välj ett eller flera ord som beskriver vad du är bra på",
+        (erfarenhetsord),)
+
+    liknande_yb, liknande_yb_skills = skapa_liknande_yb(id_valt_yrke, intresse, data)
+
+    liknande_yb_med_prognos = addera_prognos_antal_annonser(liknande_yb, data, valt_län)
+
+    intresseord = skapa_intresseord(skills_valt_yrke, liknande_yb_skills)
+    intresseord = intresseord[0:antal_att_visa_upp]
+
+    valda_intresseord = st.multiselect(
+        f"Här kommer en lista på några ord från annonser för yrkesbenämningar som på ett eller annat sätt liknar det du tidigare har jobbat med. Välj ett eller flera ord som beskriver vad du är intresserad av",
+        (intresseord),)
+    
+    st.write("Nedan finns länkar till annonser för några liknande yrken utifrån tillhörande yrkesgrupp och valda erfarenhets- och intresseord")
+
+    col1, col2 = st.columns(2)
+
+    antal = 0
+    for i in liknande_yb:
+        try: 
+            id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == i, data["yrkesid_namn"]))[0]
+            skills_liknande = liknande_yb_skills.get(i)
+            länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord, valda_intresseord, data)
+            if (antal % 2) == 0:
+                col1.link_button(i, länk)
+            else:
+                col2.link_button(i, länk)
+            antal += 1
+        except:
+            pass
+
+    vald_liknande = st.selectbox(
+        "Välj ett liknande yrke som du skulle vilja veta mer om",
+        (liknande_yb_med_prognos),index = None)
+    
+    if vald_liknande:
+        vald_liknande_split = vald_liknande.split("(")
+        vald_liknande = vald_liknande_split[0]
+        skills_liknande = liknande_yb_skills.get(vald_liknande)
+        valda_ord = valda_erfarenhetsord + valda_intresseord
+        jämförelselista = skapa_jämförelselista(valt_yrke, skills_valt_yrke, vald_liknande, skills_liknande, valda_ord)
+
+        id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == vald_liknande, data["yrkesid_namn"]))[0]
+
+        try:
+            af_kompetenser = data["yrkesid_topplista_taxonomibegrepp"].get(id_liknande_yrke)
+            if not af_kompetenser:
+                af_kompetenser = ["Kunde inte hitta någon data"]
+        except:
+            af_kompetenser = ["Kunde inte hitta någon data"]
+        taxonomi = ("  \n ").join(af_kompetenser)
 
         col1, col2 = st.columns(2)
 
         with col1:
-            erfarenhet = st.radio(
-                f"Hur mycket erfarenhet har du som {valt_yrke}?",
-                ["oerfaren", "erfaren", "mycket erfaren"],
-                horizontal = True, index = None,
-            )
-
-            rörlighet = st.radio(
-                f"Kan du tänka dig att söka jobb i närheten av {valt_län}?",
-                ["ja", "nej"],
-                horizontal = True, index = None,
-            )
+            st.write(f"Till höger ser du kompetenser som många arbetsgivare efterfrågar när de söker efter en {vald_liknande}")
 
         with col2:
-            intresse = st.radio(
-                f"Hur intresserad är du av yrken inom yrkesområdet {område}?",
-                ["inte", "intresserad", "mycket"],
-                horizontal = True, index = None,
-            )
+            st.write(taxonomi)
 
-            utbildningsintresse = st.radio(
-                f"Skulle du vara intresserad av en längre utbildning för att hitta ett nytt yrke?",
-                ["ja", "nej"],
-                horizontal = True, index = None,
-            )
+        st.divider()
 
-        antal_att_visa_upp = 20
+        st.write(f"Nedanför ser du ord som många arbetsgivare använder i annonser för {vald_liknande}")
 
-        info_valt_yrke = data["yrkesid_topplista_skills"].get(id_valt_yrke)
-        skills_valt_yrke = info_valt_yrke["skills"]
-        skills = list(skills_valt_yrke.keys())
-        erfarenhetsord = skills[0:antal_att_visa_upp]
+        ordmoln = skapa_ordmoln(skills_liknande, skills_valt_yrke, valda_erfarenhetsord, valda_intresseord)
+        st.pyplot(ordmoln)
 
-        valda_erfarenhetsord = st.multiselect(
-            f"Här är en lista på några ord från annonser för {valt_yrke}. Välj ett eller flera ord som beskriver vad du är bra på",
-            (erfarenhetsord),)
+        st.divider()
 
-        liknande_yb, liknande_yb_skills = skapa_liknande_yb(id_valt_yrke, intresse, data)
+        st.write(f"Nedanför ser du likheter och skillnader mellan hur olika arbetsgivare och utbildningsanordnare uttrycker sig när det kommer till kunskaper, erfarenheter och arbetsuppgifter för {valt_yrke} och {vald_liknande}")
 
-        liknande_yb_med_prognos = addera_prognos_antal_annonser(liknande_yb, data, valt_län)
+        venn_data = jämföra_bakgrund_med_liknande(jämförelselista, valda_ord)
+        venn = skapa_venn(venn_data)
+        st.pyplot(venn)
 
-        intresseord = skapa_intresseord(skills_valt_yrke, liknande_yb_skills)
-        intresseord = intresseord[0:antal_att_visa_upp]
+def välja_yrkesbakgrund(data, valt_län):
+    giltiga_yb = data["giltiga_yrksnamn"]
+    giltiga_yb = sorted(giltiga_yb)
 
-        valda_intresseord = st.multiselect(
-            f"Här kommer en lista på några ord från annonser för yrkesbenämningar som på ett eller annat sätt liknar det du tidigare har jobbat med. Välj ett eller flera ord som beskriver vad du är intresserad av",
-            (intresseord),)
+    yrkesval_områdesval = st.radio(
+            f"Vill du välja ett yrke direkt eller orientera dig fram från ett yrkesområde?",
+            ["välja yrke", "välja yrkesområde"],
+            horizontal = True, index = 0,
+        )
+    
+    if yrkesval_områdesval == "välja yrke":
+
+        valt_yrke = st.selectbox(
+            "Välj ett yrke som du tidigare har arbetat som",
+            (giltiga_yb), index = None)
         
-        st.write("Nedan finns länkar till annonser för några liknande yrken utifrån tillhörande yrkesgrupp och valda erfarenhets- och intresseord")
+        if valt_yrke:
+            välja_yrke(valt_yrke, data)
+    
+    elif yrkesval_områdesval == "välja yrkesområde":
 
-        col1, col2 = st.columns(2)
+        områdes_ssyk_yb_dict = läsa_in_json_fil("område_ssyk_yb_struktur.json")
 
-        antal = 0
-        for i in liknande_yb:
-            try: 
-                id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == i, data["yrkesid_namn"]))[0]
-                skills_liknande = liknande_yb_skills.get(i)
-                länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord, valda_intresseord, data)
-                if (antal % 2) == 0:
-                    col1.link_button(i, länk)
-                else:
-                    col2.link_button(i, länk)
-                antal += 1
-            except:
-                pass
+        områden = list(områdes_ssyk_yb_dict.keys())
 
-        vald_liknande = st.selectbox(
-            "Välj ett liknande yrke som du skulle vilja veta mer om",
-            (liknande_yb_med_prognos),index = None)
+        valt_yrkesområde = st.selectbox(
+            "Eller välj ett yrkesområde som du tidigare har arbetat inom",
+            (områden), index = None)
         
-        if vald_liknande:
-            vald_liknande_split = vald_liknande.split("(")
-            vald_liknande = vald_liknande_split[0]
-            skills_liknande = liknande_yb_skills.get(vald_liknande)
-            valda_ord = valda_erfarenhetsord + valda_intresseord
-            jämförelselista = skapa_jämförelselista(valt_yrke, skills_valt_yrke, vald_liknande, skills_liknande, valda_ord)
+        if valt_yrkesområde:
 
-            id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == vald_liknande, data["yrkesid_namn"]))[0]
+            ssyk_info = områdes_ssyk_yb_dict.get(valt_yrkesområde)
+            valbara_ssyk = []
+            ssyk_yb = {}
+            for s in ssyk_info:
+                for k, v in s.items():
+                    valbara_ssyk.append(k)
+                    ssyk_yb[k] = v
+            
+            vald_yrkesgrupp = st.selectbox(
+            "Välj en yrkesgrupp för att hitta olika yrken",
+            (valbara_ssyk), index = None)
 
-            ordmoln = skapa_ordmoln(id_liknande_yrke, skills_liknande, skills_valt_yrke, valda_erfarenhetsord, valda_intresseord, data)
-            st.pyplot(ordmoln)
+            valbara_yb = ssyk_yb.get(vald_yrkesgrupp)
 
-            venn_data = jämföra_bakgrund_med_liknande(jämförelselista, valda_ord)
-            venn = skapa_venn(venn_data)
-            st.pyplot(venn)
+            if vald_yrkesgrupp:
+                valt_yrke = st.selectbox(
+                    "Välj ett yrke som du tidigare har arbetat som",
+                    (valbara_yb), index = None)
+                if valt_yrke:
+                    välja_yrke(valt_yrke, data)
         
 def välja_utbildningsbakgrund(data, valt_län):
     utbildningsområden = []
@@ -522,14 +559,39 @@ def välja_utbildningsbakgrund(data, valt_län):
 
                 id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == vald_liknande, data["yrkesid_namn"]))[0]
 
-                ordmoln = skapa_ordmoln(id_liknande_yrke, skills_liknande, skills_vald_utb, valda_erfarenhetsord_utb, valda_intresseord_utb, data)
+                try:
+                    af_kompetenser = data["yrkesid_topplista_taxonomibegrepp"].get(id_liknande_yrke)
+                    if not af_kompetenser:
+                        af_kompetenser = ["Kunde inte hitta någon data"]
+                except:
+                    af_kompetenser = ["Kunde inte hitta någon data"]
+                taxonomi = ("  \n ").join(af_kompetenser)
+
+                col1, col2 = st.columns(2)
+
+                with col1:
+                    st.write(f"Till höger ser du kompetenser som många arbetsgivare efterfrågar när de söker efter en {vald_liknande}")
+
+                with col2:
+                    st.write(taxonomi)
+
+                st.divider()
+
+                st.write(f"Nedanför ser du ord som många arbetsgivare använder i annonser för {vald_liknande}")
+
+                ordmoln = skapa_ordmoln(skills_liknande, skills_vald_utb, valda_erfarenhetsord_utb, valda_intresseord_utb)
                 st.pyplot(ordmoln)
+
+                st.divider()
+
+                st.write(f"Nedanför ser du likheter och skillnader mellan hur olika arbetsgivare och utbildningsanordnare uttrycker sig när det kommer till kunskaper, erfarenheter och arbetsuppgifter för {vald_utbildningsinriktning} och {vald_liknande}")
 
                 venn_data = jämföra_bakgrund_med_liknande(jämförelselista, valda_ord)
                 venn = skapa_venn(venn_data)
                 st.pyplot(venn)
 
 all_data = läsa_in_json_fil("masterdata.json")
+
 giltiga_län = list(all_data["länskod_länsnamn"].values())
 giltiga_län = sorted(giltiga_län)
 
@@ -552,4 +614,3 @@ if valt_län and yrke_utb_val == "yrkesbakgrund":
 
 elif valt_län and yrke_utb_val == "utbildningsbakgrund":
     välja_utbildningsbakgrund(all_data, valt_län)
-
