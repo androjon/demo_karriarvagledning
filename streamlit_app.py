@@ -578,35 +578,35 @@ def välja_utbildningsbakgrund(data, valt_län, länsid):
                     except:
                         pass
 
-            with stylable_container(
-                key= "green_button",
-                css_styles = """
-                button {
-                    display: inline-block;
-                    outline: none;
-                    cursor: pointer;
-                    font-size: 12px;
-                    line-height: 1;
-                    border-radius: 400px;
-                    transition-property: background-color,border-color,color,box-shadow,filter;
-                    transition-duration: .3s;
-                    border: 1px solid transparent;
-                    letter-spacing: 2px;
-                    min-width: 100px;
-                    white-space: normal;
-                    font-weight: 700;
-                    text-align: center;
-                    padding: 8px 20px;
-                    color: #fff;
-                    background-color: #1ED760;
-                    height: 20px;
-                    :hover{
-                        transform: scale(1.04);
-                        background-color: #21e065;
-                            }
-                    """,
-            ):
-                st.button("Spara bakgrund", on_click = spara_data, args = (valt_yrke, valda_erfarenhetsord, valda_intresseord, liknande_yb))
+                with stylable_container(
+                    key= "green_button",
+                    css_styles = """
+                    button {
+                        display: inline-block;
+                        outline: none;
+                        cursor: pointer;
+                        font-size: 12px;
+                        line-height: 1;
+                        border-radius: 400px;
+                        transition-property: background-color,border-color,color,box-shadow,filter;
+                        transition-duration: .3s;
+                        border: 1px solid transparent;
+                        letter-spacing: 2px;
+                        min-width: 100px;
+                        white-space: normal;
+                        font-weight: 700;
+                        text-align: center;
+                        padding: 8px 20px;
+                        color: #fff;
+                        background-color: #1ED760;
+                        height: 20px;
+                        :hover{
+                            transform: scale(1.04);
+                            background-color: #21e065;
+                                }
+                        """,
+                ):
+                    st.button("Spara bakgrund", on_click = spara_data, args = (valt_yrke, valda_erfarenhetsord, valda_intresseord, liknande_yb))
         
 
                 vald_liknande = st.selectbox(
