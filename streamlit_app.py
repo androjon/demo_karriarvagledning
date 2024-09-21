@@ -606,8 +606,7 @@ def välja_utbildningsbakgrund(data, valt_län, länsid):
                                 }
                         """,
                 ):
-                    st.button("Spara bakgrund", on_click = spara_data, args = (valt_yrke, valda_erfarenhetsord, valda_intresseord, liknande_yb))
-        
+                    st.button("Spara bakgrund", on_click = spara_data, args = (vald_utbildningsinriktning, valda_erfarenhetsord_utb, valda_intresseord_utb, liknande_yb))
 
                 vald_liknande = st.selectbox(
                     "Välj ett liknande yrke som du skulle vilja veta mer om",
