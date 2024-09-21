@@ -683,7 +683,6 @@ if len(st.session_state.bakgrunder) > 2:
 
 def ändra_state():
     st.session_state.vald_bakgrund = False
-    st.write(st.session_state.liknande_yrken)
 
 if st.session_state.vald_bakgrund == True:
     st.button("Lägga till fler yrkes- eller utbildningsbakgrunder", on_click = ändra_state)
