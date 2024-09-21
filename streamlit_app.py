@@ -9,6 +9,7 @@ import itertools
 import operator
 import math
 import numpy as np
+from streamlit_extras.stylable_container import stylable_container
 
 def läsa_in_json_fil(filnamn):
     with open(filnamn) as fil:
@@ -357,14 +358,14 @@ def välja_yrke(valt_yrke, data, länsid):
     valda_intresseord = st.multiselect(
         f"Här kommer en lista på några ord från annonser för yrkesbenämningar som på ett eller annat sätt liknar det du tidigare har jobbat med. Välj ett eller flera ord som beskriver vad du är intresserad av",
         (intresseord),)
-    
+
     st.write("Nedan finns länkar till annonser för några liknande yrken utifrån tillhörande yrkesgrupp och valda erfarenhets- och intresseord")
 
     col1, col2 = st.columns(2)
 
     antal = 0
     for i in liknande_yb:
-        try: 
+        try:
             id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == i, data["yrkesid_namn"]))[0]
             skills_liknande = liknande_yb_skills.get(i)
             länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord, valda_intresseord, data, länsid)
@@ -376,6 +377,36 @@ def välja_yrke(valt_yrke, data, länsid):
         except:
             pass
 
+    with stylable_container(
+        key= "green_button",
+        css_styles = """
+        button {
+            display: inline-block;
+            outline: none;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 1;
+            border-radius: 400px;
+            transition-property: background-color,border-color,color,box-shadow,filter;
+            transition-duration: .3s;
+            border: 1px solid transparent;
+            letter-spacing: 2px;
+            min-width: 100px;
+            white-space: normal;
+            font-weight: 700;
+            text-align: center;
+            padding: 8px 20px;
+            color: #fff;
+            background-color: #1ED760;
+            height: 20px;
+            :hover{
+                transform: scale(1.04);
+                background-color: #21e065;
+                    }
+            """,
+    ):
+        st.button("Spara bakgrund", on_click = spara_data, args = (valt_yrke, valda_erfarenhetsord, valda_intresseord, liknande_yb))
+        
     vald_liknande = st.selectbox(
         "Välj ett liknande yrke som du skulle vilja veta mer om",
         (liknande_yb_med_prognos),index = None)
@@ -431,11 +462,10 @@ def välja_yrkesbakgrund(data, valt_län, länsid):
         )
     
     if yrkesval_områdesval == "välja yrke":
-
         valt_yrke = st.selectbox(
             "Välj ett yrke som du tidigare har arbetat som",
-            (giltiga_yb), index = None)
-        
+            (giltiga_yb), placeholder = "välj", index = None)
+
         if valt_yrke:
             välja_yrke(valt_yrke, data, länsid)
     
@@ -536,7 +566,7 @@ def välja_utbildningsbakgrund(data, valt_län, länsid):
 
                 antal = 0
                 for i in liknande_yb:
-                    try: 
+                    try:
                         id_liknande_yrke = list(filter(lambda x: data["yrkesid_namn"][x] == i, data["yrkesid_namn"]))[0]
                         skills_liknande = liknande_yb_skills.get(i)
                         länk = skapa_länk_till_platsbanken(id_liknande_yrke, skills_liknande, valda_erfarenhetsord_utb, valda_intresseord_utb, data, länsid)
@@ -547,6 +577,9 @@ def välja_utbildningsbakgrund(data, valt_län, länsid):
                         antal += 1
                     except:
                         pass
+
+                st.button("Spara bakgrund", on_click = spara_data, args = (vald_utbildningsinriktning, valda_erfarenhetsord_utb, valda_intresseord_utb, liknande_yb))
+
 
                 vald_liknande = st.selectbox(
                     "Välj ett liknande yrke som du skulle vilja veta mer om",
@@ -594,30 +627,78 @@ def välja_utbildningsbakgrund(data, valt_län, länsid):
             except:
                 st.write("Finns inte tillräckligt med data")
 
+def spara_data(vald_bakgrund, valda_erfarenhetsord, valda_intresseord, liknande):
+    if vald_bakgrund not in st.session_state.bakgrunder:
+        st.session_state.vald_bakgrund = True
+        st.session_state.bakgrunder.append(vald_bakgrund)
+        st.session_state.erfarenhetsord.extend(valda_erfarenhetsord)
+        st.session_state.intresseord.extend(valda_intresseord)
+        for i in liknande:
+            st.session_state.liknande_yrken.append(i)
+
+    with st.sidebar:
+        rubrik = f"<p style='font-size:12px;font-weight: bold;'>Tillfälligt sparad data</p>"
+        st.markdown(rubrik, unsafe_allow_html=True)
+
+        bakgrundstext = "Sparade bakgrunder:\n"
+        for i in st.session_state.bakgrunder:
+            bakgrundstext += f"  {i}\n"
+        bakgrundstext += "Sparade erfarenhetsord:\n"
+        for i in st.session_state.erfarenhetsord:
+            bakgrundstext += f"  {i}\n"
+        bakgrundstext += "Sparade intresseord::\n"
+        for i in st.session_state.intresseord:
+            bakgrundstext += f"  {i}\n"
+        text = f"<p style='font-size:12px;white-space: pre;'>{bakgrundstext}</p>"
+        st.markdown(text, unsafe_allow_html=True)
+
 all_data = läsa_in_json_fil("masterdata.json")
 alla_länsid = läsa_in_json_fil("regionsnamn_id.json")
 
 giltiga_län = list(all_data["länskod_länsnamn"].values())
 giltiga_län = sorted(giltiga_län)
 
+st.logo("af-logotyp-rgb-540px.jpg")
+
 st.title("Demo")
 
 st.write("Denna demo försöker utforska vad som går att säga utifrån annonsdata, utbildningsbeskrivningar, prognoser och arbetsmarknadstaxonomi. De fyra frågorna den försöker svar på är:\n1) VILKA liknande yrken finns det utifrån din yrkes- och utbildningsbakgrund?\n2) VARFÖR skulle ett liknande yrke passa just dig?\n3) HUR hittar du till annonser för dessa liknande yrken?\n4) VAD är bra för dig att lyfta fram i en ansökan till ett liknande yrke?")
+
+instruktion = f"<p style='font-size:12px;'>Vill du starta om tryck cmd + r</p>"
+st.markdown(instruktion, unsafe_allow_html=True)
+
+if "vald_bakgrund" not in st.session_state:
+    st.session_state.vald_bakgrund = False
+    st.session_state.bakgrunder = []
+    st.session_state.erfarenhetsord = []
+    st.session_state.intresseord = []
+    st.session_state.liknande_yrken = []
 
 valt_län = st.selectbox(
     "Välj det län du huvudsakligen söker jobb i",
     (giltiga_län), index = None)
 
-yrke_utb_val = st.radio(
-            f"Vill du jämföra din yrkes- eller utbildningsbakgrund mot liknande yrken?",
-            ["yrkesbakgrund", "utbildningsbakgrund"],
-            horizontal = True, index = 0,
+if len(st.session_state.bakgrunder) > 2:
+    st.button("Testa om annons- och utbildningsdata kan hjälpa dig att upptäcka dina dolda kompetenser", on_click = None)
+
+def ändra_state():
+    st.session_state.vald_bakgrund = False
+    st.write(st.session_state.liknande_yrken)
+
+if st.session_state.vald_bakgrund == True:
+    st.button("Lägga till fler yrkes- eller utbildningsbakgrunder", on_click = ändra_state)
+
+if st.session_state.vald_bakgrund == False:
+    yrke_utb_val = st.radio(
+                f"Vill du jämföra din yrkes- eller utbildningsbakgrund mot liknande yrken?",
+                ["yrkesbakgrund", "utbildningsbakgrund"],
+                horizontal = True, index = 0,
         )
 
-if valt_län and yrke_utb_val == "yrkesbakgrund":
-    länsid = alla_länsid.get(valt_län)
-    välja_yrkesbakgrund(all_data, valt_län, länsid)
+    if valt_län and yrke_utb_val == "yrkesbakgrund":
+        länsid = alla_länsid.get(valt_län)
+        välja_yrkesbakgrund(all_data, valt_län, länsid)
 
-elif valt_län and yrke_utb_val == "utbildningsbakgrund":
-    länsid = alla_länsid.get(valt_län)
-    välja_utbildningsbakgrund(all_data, valt_län, länsid)
+    elif valt_län and yrke_utb_val == "utbildningsbakgrund":
+        länsid = alla_länsid.get(valt_län)
+        välja_utbildningsbakgrund(all_data, valt_län, länsid)
