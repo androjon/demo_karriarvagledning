@@ -9,6 +9,7 @@ import itertools
 import operator
 import math
 import numpy as np
+import requests
 
 @st.cache_data
 def import_data(filename):
@@ -27,6 +28,28 @@ def create_small_wordcloud(skills_occupation):
     plt.axis('off')
     plt.tight_layout(pad=0)
     st.pyplot(plt)
+
+@st.cache_data
+def fetch_number_of_ads(url):
+    response = requests.get(url)
+    data = response.text
+    json_data = json.loads(data)
+    json_data_total = json_data["total"]
+    number_of_ads = list(json_data_total.values())[0]
+    return number_of_ads
+
+@st.cache_data
+def number_of_ads(ssyk_id, region_id, words):
+    base = "https://jobsearch.api.jobtechdev.se/search?"
+    end = "&limit=0"
+    wordstring = "%20".join(words)
+    string_words = "&q=" + wordstring
+    if region_id:
+        url = base + "occupation-group=" + ssyk_id + "&region=" + region_id + string_words + end
+    else:
+        url = base + "occupation-group=" + ssyk_id + string_words + end
+    number_of_ads = fetch_number_of_ads(url)
+    return number_of_ads
 
 def create_words_of_interest(selected, similar):
     selected_skills = list(selected.keys())
@@ -48,6 +71,21 @@ def show_wordcloud_selected_occupation(occupation, id, data):
         skills_selected_occupation = info_selected_occupation["skills"]
         skills_selected_occupation = dict(itertools.islice(skills_selected_occupation.items(),30))
         create_small_wordcloud(skills_selected_occupation)
+
+        area = data["yrkesid_område"].get(id)
+        ssyk_id = data["yrkesid_ssykid"].get(id)
+
+
+        PIPE = "│"
+        ELBOW = "└──"
+        SHORT_ELBOW = "└─"
+        LONG_ELBOW = "    └──"
+        TEE = "├──"
+        PIPE_PREFIX = "│   "
+        SPACE_PREFIX = "&nbsp;&nbsp;&nbsp;&nbsp;"
+
+        träd = f"<p style='font-size:12px;'>{area} (yrkesområde)<br />{SHORT_ELBOW}{ssyk_id} (yrkesgrupp)<br />{SPACE_PREFIX}{SHORT_ELBOW}{occupation} (yrkesbenämning)</p>"
+        st.markdown(träd, unsafe_allow_html=True)
 
 def create_comparable_lists(name_selected, skills_selected, name_similar, skills_similar, selected_words):
     output = []
@@ -71,7 +109,7 @@ def create_comparable_lists(name_selected, skills_selected, name_similar, skills
     output.append(similar)
     return output
 
-def add_forecast_addnumbers(occupation, id, data):
+def add_forecast_addnumbers(occupation, id, ssyk, words, data, region_id):
     forecast_lan = "00"
     try:
         forecast = data["yrkesid_länskod_prognos"].get(id)
@@ -86,11 +124,8 @@ def add_forecast_addnumbers(occupation, id, data):
             pil = "\u2191"
         else:
             pil = ""
-        adds_occupation = data["yrkesid_länskod_annonser"].get(id)
-        ads_sweden = 0
-        for value in adds_occupation.values():
-            ads_sweden += value
-        return str(f"{occupation}(Sverige {ads_sweden}){pil}"), str(f"{occupation}(Sverige {ads_sweden})"), str(f"{occupation}({pil})")
+        addnumber = number_of_ads(ssyk, region_id, words)
+        return str(f"{occupation}({addnumber}){pil}"), str(f"{occupation}({addnumber})"), str(f"{occupation}({pil})")
     except:
         return occupation
 
@@ -105,23 +140,25 @@ def convert_text(text):
         text = re.sub(key, value, text)
     return text
 
-def create_link(ssyk_id, skills):
+def create_link(ssyk_id, keywords, region_id):
     base = f"https://arbetsformedlingen.se/platsbanken/annonser?p=5:{ssyk_id}&q="
-    skills_split = []
-    for s in skills:
+    keywords_split = []
+    for s in keywords:
         s = convert_text(s)
-        skills_split.append(s)
-    skills_split = "%20".join(skills_split)
-    #region = "&l=2:" + region_id
-    return base + skills_split #+ region
+        keywords_split.append(s)
+    keywords_split = "%20".join(keywords_split)
+    if region_id:
+        region = "&l=2:" + region_id
+        return base + keywords_split + region
+    else:
+        return base + keywords_split
 
-def create_link_to_platsbanken(ssyk_id, skills, experience, interests):
+def create_keywords(skills, words):
     number_to_save = 15
     listed_skills = list(skills.keys())
-    all_skills = experience + interests + listed_skills
-    all_skills = all_skills[0:number_to_save]
-    link = create_link(ssyk_id, all_skills)
-    return link
+    all_skills = words + listed_skills
+    keywords = all_skills[0:number_to_save]
+    return keywords
 
 def create_similar_occupations(id_selected, skills_selected, level_area_interest, input):
     all_similar = {}
@@ -237,8 +274,8 @@ def compare_background_similar(id_selected, skills_selected, similar_forecast, s
             (similar_forecast),index = None)
         
         if selected_similar:
-            selected_similar_split = selected_similar.split("(")
-            selected_similar = selected_similar_split[0]
+            # selected_similar_split = selected_similar.split("(")
+            # selected_similar = selected_similar_split[0]
             skills_selected_similar = similiar_with_skills.get(selected_similar)
             selected_words = words_of_experience + words_of_interest
             comparable_list = create_comparable_lists(selected_occupation, skills_selected, selected_similar, skills_selected_similar, selected_words)
@@ -318,7 +355,7 @@ def select_experience_interests(selected_occupation, data):
 
     with col1:
         work_experience = st.select_slider(
-            f"Hur erfaren är du som {selected_occupation}??",
+            f"Hur erfaren är du som {selected_occupation}?",
             ["oerfaren", "", "mycket erfaren"],
             value = "",
         )
@@ -326,7 +363,8 @@ def select_experience_interests(selected_occupation, data):
     with col2:
         st.button("Spara bakgrund och börja om från början", on_click = save_selections, args = (selected_occupation, selected_words_of_experience, selected_words_of_interest, all_similar))
 
-        valid_regions = list(data["länskod_länsnamn"].values())
+        regional_data = data["länskod_länsnamn"]
+        valid_regions = list(regional_data.values())
         valid_regions = sorted(valid_regions)
 
         selected_region = st.selectbox(
@@ -343,19 +381,30 @@ def select_experience_interests(selected_occupation, data):
     descriptions = import_data("id_yrkesbeskrivningar.json")
     forecasts = import_data("yrke_barometer_alla.json")
     similar_with_forecast = []
+    similar_names = []
+    if selected_region:
+        regional_id = import_data("regionsnamn_id.json")
+        selected_regional_id = regional_id.get(selected_region)
+        regional_number = list(filter(lambda x: regional_data[x] == selected_region, regional_data))[0]
+    else:
+        regional_number = "00"
+        selected_regional_id = None
     for key, value in all_similar.items():
         try:
+            similar_names.append(key)
             id_similar = list(filter(lambda x: data["yrkesid_namn"][x] == key, data["yrkesid_namn"]))[0]
             similar_description = descriptions.get(id_similar)
             similar_forecast = forecasts.get(id_similar)
             for f in similar_forecast:
-                if f["region"] == "00":
+                if f["region"] == regional_number:
                     regional_forecast_text = f["text"]
             skills = value
-            name_with_addnumbers_forecast,  name_with_addnumbers, name_with_forecast = add_forecast_addnumbers(key, id_similar, data)
-            similar_with_forecast.append(name_with_forecast)
             ssyk_id = data["yrkesid_ssykid"].get(id_similar)
-            link = create_link_to_platsbanken(ssyk_id, skills, selected_words_of_experience, selected_words_of_interest)
+            keywords = create_keywords(skills, selected_words_of_experience + selected_words_of_interest)
+            name_with_addnumbers_forecast,  name_with_addnumbers, name_with_forecast = add_forecast_addnumbers(key, id_similar, ssyk_id, keywords, data, selected_regional_id)
+            similar_with_forecast.append(name_with_forecast)
+            
+            link = create_link(ssyk_id, keywords, selected_regional_id)
             if (number % 2) == 0:
                 col1.link_button(name_with_addnumbers_forecast, link, help = regional_forecast_text)
             else:
@@ -364,7 +413,7 @@ def select_experience_interests(selected_occupation, data):
         except:
             pass
     
-    compare_background_similar(id_selected_occupation, skills_selected_occupation, similar_with_forecast, all_similar, selected_words_of_experience, selected_words_of_interest, data)
+    compare_background_similar(id_selected_occupation, skills_selected_occupation, similar_names, all_similar, selected_words_of_experience, selected_words_of_interest, data)
 
 def save_selections(occupation, experience, interest, similar):
     if occupation not in st.session_state.stored_backgrounds:
@@ -484,36 +533,7 @@ def select_educational_background(data):
                 selected_words_of_experience_education = st.multiselect(
                     f"Välj ett eller flera ord som beskriver vad du har mycket kunskap om eller är intresserad av.",
                     (words_of_experience_education),)
-                # st.button("Spara bakgrund och börja om från början", on_click = save_selections, args = (selected_occupation, selected_words_of_experience, selected_words_of_interest, all_similar))
     
-                # st.divider()
-
-                # st.write("Nedan finns länkar till annonser för några liknande yrken utifrån tillhörande yrkesgrupp och valda erfarenhets- och intresseord")
-
-                # col1, col2 = st.columns(2)
-
-                # number = 0
-                # descriptions = import_data("id_yrkesbeskrivningar.json")
-                # similar_with_forecast = []
-                # for key, value in all_similar.items():
-                #     try:
-                #         id_similar = list(filter(lambda x: data["yrkesid_namn"][x] == key, data["yrkesid_namn"]))[0]
-                #         similar_description = descriptions.get(id_similar)
-                #         skills = value
-                #         name_with_addnumbers, name_with_forecast = add_forecast_addnumbers(key, id_similar, data)
-                #         similar_with_forecast.append(name_with_forecast)
-                #         ssyk_id = data["yrkesid_ssykid"].get(id_similar)
-                #         link = create_link_to_platsbanken(ssyk_id, skills, selected_words_of_experience, selected_words_of_interest)
-                #         if (number % 2) == 0:
-                #             col1.link_button(name_with_addnumbers, link) #help = similar_description)
-                #         else:
-                #             col2.link_button(name_with_addnumbers, link) #help = similar_description)
-                #         number += 1
-                #     except:
-                #         pass
-                
-                # compare_background_similar(id_selected_occupation, skills_selected_occupation, similar_with_forecast, all_similar, selected_words_of_experience, selected_words_of_interest, data)
-
             except:
                 st.write("Finns inte tillräckligt med data")
 
