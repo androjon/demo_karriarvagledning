@@ -92,18 +92,24 @@ def create_comparable_lists(name_selected, skills_selected, name_similar, skills
     skills_selected = list(skills_selected.keys())
     for s in skills_selected:
         if s in selected_words:
-            index_to_move_from = skills_selected.index(s)
-            skill_to_move = skills_selected.pop(index_to_move_from)
-            skills_selected.insert(0, skill_to_move)
+            try:
+                index_to_move_from = skills_selected.index(s)
+                skill_to_move = skills_selected.pop(index_to_move_from)
+                skills_selected.insert(0, skill_to_move)
+            except:
+                pass
     background = {"name": name_selected,
                 "skills": skills_selected}
     output.append(background)
     skills_similar = list(skills_similar.keys())
     for k in skills_similar:
         if k in selected_words:
-            index_to_move_from = skills_selected.index(k)
-            skill_to_move = skills_selected.pop(index_to_move_from)
-            skills_selected.insert(0, skill_to_move)
+            try:
+                index_to_move_from = skills_selected.index(k)
+                skill_to_move = skills_selected.pop(index_to_move_from)
+                skills_selected.insert(0, skill_to_move)
+            except:
+                pass
     similar = {"name": name_similar,
                "skills": skills_similar}
     output.append(similar)
